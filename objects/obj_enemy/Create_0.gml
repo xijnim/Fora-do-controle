@@ -1,0 +1,1 @@
+enemy_ai = new EnemyAI(id);

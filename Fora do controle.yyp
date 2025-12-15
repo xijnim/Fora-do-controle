@@ -1,0 +1,42 @@
+{
+  "$GMProject":"v1",
+  "%Name":"Fora do controle",
+  "AudioGroups":[
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+  "configs":{
+    "children":[],
+    "name":"Default",
+  },
+  "defaultScriptType":1,
+  "Folders":[],
+  "ForcedPrefabProjectReferences":[],
+  "IncludedFiles":[],
+  "isEcma":false,
+  "LibraryEmitters":[],
+  "MetaData":{
+    "IDEVersion":"2024.14.2.212",
+  },
+  "name":"Fora do controle",
+  "resources":[
+    {"id":{"name":"obj_doritos","path":"objects/obj_doritos/obj_doritos.yy",},},
+    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scr_character_controller","path":"scripts/scr_character_controller/scr_character_controller.yy",},},
+    {"id":{"name":"scr_enemy_ai","path":"scripts/scr_enemy_ai/scr_enemy_ai.yy",},},
+    {"id":{"name":"scr_input","path":"scripts/scr_input/scr_input.yy",},},
+    {"id":{"name":"scr_noise","path":"scripts/scr_noise/scr_noise.yy",},},
+    {"id":{"name":"scr_timer","path":"scripts/scr_timer/scr_timer.yy",},},
+    {"id":{"name":"spr_cropback","path":"sprites/spr_cropback/spr_cropback.yy",},},
+    {"id":{"name":"spr_doritos","path":"sprites/spr_doritos/spr_doritos.yy",},},
+  ],
+  "resourceType":"GMProject",
+  "resourceVersion":"2.0",
+  "RoomOrderNodes":[
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+  ],
+  "templateType":"game",
+  "TextureGroups":[
+    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+}
