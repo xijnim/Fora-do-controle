@@ -50,6 +50,8 @@
     {"id":{"name":"scr_state","path":"scripts/scr_state/scr_state.yy",},},
     {"id":{"name":"scr_timer","path":"scripts/scr_timer/scr_timer.yy",},},
     {"id":{"name":"scr_vfx_manager","path":"scripts/scr_vfx_manager/scr_vfx_manager.yy",},},
+    {"id":{"name":"sfx_micro_enemy_spawn","path":"sounds/sfx_micro_enemy_spawn/sfx_micro_enemy_spawn.yy",},},
+    {"id":{"name":"sfx_player_eat","path":"sounds/sfx_player_eat/sfx_player_eat.yy",},},
     {"id":{"name":"spr_doritos","path":"sprites/spr_doritos/spr_doritos.yy",},},
     {"id":{"name":"spr_enemy_cheetos","path":"sprites/spr_enemy_cheetos/spr_enemy_cheetos.yy",},},
     {"id":{"name":"spr_enemy_corona","path":"sprites/spr_enemy_corona/spr_enemy_corona.yy",},},

@@ -1,6 +1,6 @@
 function __State() constructor {
     get_level = function() {
-        if xp < 100 {
+        if xp < 30 {
             return 1;
         }
         return 2;

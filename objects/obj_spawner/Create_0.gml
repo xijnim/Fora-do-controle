@@ -1,4 +1,4 @@
-timer = new Timer(2, function() {
+timer = new Timer(1, function() {
 	if instance_number(obj_enemy) >= 64 {
 		return;
 	}
@@ -8,6 +8,7 @@ timer = new Timer(2, function() {
     var spawn_y = pos[1];
 
     var type = irandom(EnemyIdx.ENUM_LENGTH-1);
+	audio_play_sound(sfx_micro_enemy_spawn, 3, 0, .5, 0, random_range(.9, 1.1));
     instance_create_depth(spawn_x, spawn_y, 0, obj_enemy, {type});
 });
 
