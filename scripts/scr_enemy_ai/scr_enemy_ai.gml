@@ -50,7 +50,7 @@ function EnemyAI(inst) constructor {
     }
 
     __inst = inst;
-    __time = 0;
+    __time = irandom(13000);
     __mult_x = 1;
     __mult_y = 1;
     __hsp = 0;
