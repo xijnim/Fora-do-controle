@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Doritos",
+    "path":"folders/Doritos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

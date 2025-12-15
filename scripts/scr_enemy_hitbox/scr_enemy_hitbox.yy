@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_enemy_hitbox",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Enemies",
+    "path":"folders/Enemies.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

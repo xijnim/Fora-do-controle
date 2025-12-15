@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_noise",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Util",
+    "path":"folders/Util.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

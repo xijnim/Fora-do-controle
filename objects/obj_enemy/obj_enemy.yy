@@ -10,8 +10,8 @@
   "name":"obj_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Enemies",
+    "path":"folders/Enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cropback",
-    "path":"sprites/spr_cropback/spr_cropback.yy",
+    "name":"spr_enemy_cropbac",
+    "path":"sprites/spr_enemy_cropbac/spr_enemy_cropbac.yy",
   },
   "spriteMaskId":null,
   "visible":true,

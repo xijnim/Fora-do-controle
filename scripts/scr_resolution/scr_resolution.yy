@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_resolution",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Globals and Daemons",
+    "path":"folders/Globals and Daemons.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

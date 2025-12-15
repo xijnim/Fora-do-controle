@@ -21,7 +21,9 @@ function EnemyAI(inst) constructor {
     __get_target_spd = function() {
         var spd = 1.3;
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
-        if instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 28 {
+        var in_area = instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 28;
+        var is_scared = __inst.data.ai_type == EnemyAI_Type.Alive && __inst.data.level <= State.get_level();
+        if in_area && is_scared {
             __panic = true;
         }
         if __panic {
@@ -60,4 +62,9 @@ function EnemyAI(inst) constructor {
     __panic_timer = new Timer(3, function() {
         __panic = false;
     });
+}
+
+enum EnemyAI_Type {
+    Alive,
+    Idle,
 }

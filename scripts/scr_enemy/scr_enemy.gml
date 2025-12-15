@@ -1,0 +1,28 @@
+function Enemy(config) constructor {
+    sprite = config.sprite;
+    ai_type = config.ai_type;
+    level = config.level;
+}
+
+enum EnemyIdx {
+    Dust,
+    CropBac,
+    Corona,
+    Nut,
+
+    ENUM_LENGTH,
+
+    Cheetos,
+}
+
+global.enemies = array_create(EnemyIdx.ENUM_LENGTH, undefined);
+
+global.enemies[EnemyIdx.Dust] = __get_enemy_dust();
+global.enemies[EnemyIdx.CropBac] = __get_enemy_cropbac();
+global.enemies[EnemyIdx.Corona] = __get_enemy_corona();
+global.enemies[EnemyIdx.Cheetos] = __get_enemy_cheetos();
+global.enemies[EnemyIdx.Nut] = __get_enemy_nut();
+
+array_foreach(global.enemies, function(enemy) {
+    assert_exists(enemy);
+});

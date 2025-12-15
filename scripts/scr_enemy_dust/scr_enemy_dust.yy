@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enemy_dust",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enemy_dust",
+  "parent":{
+    "name":"Dust",
+    "path":"folders/Enemies/Dust.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

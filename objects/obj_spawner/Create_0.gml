@@ -1,4 +1,4 @@
-timer = new Timer(3, function() {
+timer = new Timer(2, function() {
 	if instance_number(obj_enemy) >= 64 {
 		return;
 	}
@@ -7,7 +7,8 @@ timer = new Timer(3, function() {
     var spawn_x = pos[0];
     var spawn_y = pos[1];
 
-    instance_create_depth(spawn_x, spawn_y, 0, obj_enemy);
+    var type = irandom(EnemyIdx.ENUM_LENGTH-1);
+    instance_create_depth(spawn_x, spawn_y, 0, obj_enemy, {type});
 });
 
 __get_spawn_pos = function() {

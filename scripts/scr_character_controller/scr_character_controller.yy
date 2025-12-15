@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_character_controller",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Doritos",
+    "path":"folders/Doritos.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
