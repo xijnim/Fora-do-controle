@@ -17,10 +17,18 @@ function CharacterController(inst) constructor {
                 __vsp = lerp(__vsp, 0, fric);
             }
         } else {
-            __time += .07;
-            var spd = 4;
-            var target_hsp = noise(__time*.24)*spd;
-            var target_vsp = noise(__time*.3)*spd;
+            var spd = 10;
+            var target_hsp = spd*__berserk_cos;
+            var target_vsp = spd*__berserk_sin;
+            var predicted_x = __inst.x + target_hsp;
+            var predicted_y = __inst.y + target_vsp;
+
+            if predicted_x != clamp(predicted_x, 0, room_width) {
+                __berserk_cos = -__berserk_cos;
+            }
+            if predicted_y != clamp(predicted_y, 0, room_height) {
+                __berserk_sin = -__berserk_sin;
+            }
 
             __hsp = lerp(__hsp, target_hsp, .6);
             __vsp = lerp(__vsp, target_vsp, .6);
@@ -38,10 +46,17 @@ function CharacterController(inst) constructor {
         __knockback_y += lengthdir_y(spd, dir);
     }
 
+    reset_berserk = function() {
+        __berserk_sin = choose(1, -1);
+        __berserk_cos = choose(1, -1);
+    }
+
     __time = 0;
     __inst = inst;
     __hsp = 0;
     __vsp = 0;
     __knockback_x = 0;
     __knockback_y = 0;
+    __berserk_sin = choose(1, -1);
+    __berserk_cos = choose(1, -1);
 }

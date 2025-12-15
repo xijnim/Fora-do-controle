@@ -8,9 +8,14 @@ if State.xp%5 == 0 && State.xp > 0 {
     if !had_berserk {
         State.berserk = true;
         had_berserk = true;
+        character_controller.reset_berserk();
     }
 } else {
     had_berserk = false;
+}
+
+if State.berserk {
+    berserk_timer.tick();
 }
 
 x = clamp(x, 0, room_width);
