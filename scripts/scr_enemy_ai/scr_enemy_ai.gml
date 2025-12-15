@@ -19,9 +19,9 @@ function EnemyAI(inst) constructor {
     }
 
     __get_target_spd = function() {
-        var spd = 1.5;
+        var spd = 1.3;
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
-        if instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 48 {
+        if instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 28 {
             __panic = true;
         }
         if __panic {
