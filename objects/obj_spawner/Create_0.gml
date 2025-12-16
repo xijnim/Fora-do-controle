@@ -11,7 +11,7 @@ timer = new Timer(1, function() {
     possibilities = array_filter(possibilities, function(enemy_idx) {
         if enemy_idx == EnemyIdx.CropBac || enemy_idx == EnemyIdx.Corona {
             var bacteria_amt = __get_enemy_amt_by_type(EnemyIdx.CropBac) + __get_enemy_amt_by_type(EnemyIdx.Corona);
-            var cap = State.get_level() > 1 ? 12 : 32;
+            var cap = State.get_level() > 1 ? 0 : 26;
             if bacteria_amt >= cap {
                 return false;
             }
@@ -19,7 +19,7 @@ timer = new Timer(1, function() {
         if enemy_idx == EnemyIdx.Nut {
             var nut_amt = __get_enemy_amt_by_type(EnemyIdx.Nut);
 
-            var nut_cap = State.get_level() > 1 ? 16 : 12;
+            var nut_cap = State.get_level() > 1 ? 20 : 8;
 
             if nut_amt >= nut_cap {
                 return false;

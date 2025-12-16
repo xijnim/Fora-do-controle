@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enemy_cheese",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enemy_cheese",
+  "parent":{
+    "name":"Cheese",
+    "path":"folders/Enemies/Cheese.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
