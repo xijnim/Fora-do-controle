@@ -12,12 +12,12 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Doritos","folderPath":"folders/Doritos.yy","name":"Doritos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Enemies","folderPath":"folders/Enemies.yy","name":"Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Cheese","folderPath":"folders/Enemies/Cheese.yy","name":"Cheese","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cheetos","folderPath":"folders/Enemies/Cheetos.yy","name":"Cheetos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Chocolate","folderPath":"folders/Enemies/Chocolate.yy","name":"Chocolate","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Corona","folderPath":"folders/Enemies/Corona.yy","name":"Corona","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Cropbac","folderPath":"folders/Enemies/Cropbac.yy","name":"Cropbac","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Dust","folderPath":"folders/Enemies/Dust.yy","name":"Dust","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Cheese","folderPath":"folders/Enemies/Cheese.yy","name":"Cheese","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Nut","folderPath":"folders/Enemies/Nut.yy","name":"Nut","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sugar","folderPath":"folders/Enemies/Sugar.yy","name":"Sugar","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Globals and Daemons","folderPath":"folders/Globals and Daemons.yy","name":"Globals and Daemons","resourceType":"GMFolder","resourceVersion":"2.0",},
