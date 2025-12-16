@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"sfx_player_eat",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Doritos",
+    "path":"folders/Doritos.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

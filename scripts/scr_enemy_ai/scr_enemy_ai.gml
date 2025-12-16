@@ -10,8 +10,8 @@ function EnemyAI(inst) constructor {
         __inst.x += __hsp;
         __inst.y += __vsp;
         
-        if __panic {
-            __panic_timer.tick();
+        if __state != EnemyAI_State.Idle {
+            __forget_timer.tick();
         }
 
         __inst.x = clamp(__inst.x, 0, room_width);
@@ -26,13 +26,27 @@ function EnemyAI(inst) constructor {
         }
 
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
-        var in_area = instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 28;
-        var is_scared = __inst.data.ai_type == EnemyAI_Type.Alive && __inst.data.level <= State.get_level();
-        if in_area && is_scared {
-            __panic = true;
+        var in_area = instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 48;
+        if __inst.data.ai_type == EnemyAI_Type.Alive && in_area {
+            if __inst.data.level > State.get_level() {
+                if !State.berserk {
+                    __state = EnemyAI_State.Hunt;
+                    __forget_timer.reset();
+                }
+            } else {
+                __state = EnemyAI_State.Panic;
+                __forget_timer.reset();
+            }
         }
-        if __panic {
+        if __state == EnemyAI_State.Panic {
             var dir = point_direction(doritos.x, doritos.y, __inst.x, __inst.y);
+            var hsp = lengthdir_x(spd, dir);
+            var vsp = lengthdir_y(spd, dir);
+
+            return [hsp, vsp];
+        }
+        if __state == EnemyAI_State.Hunt {
+            var dir = point_direction(__inst.x, __inst.y, doritos.x, doritos.y);
             var hsp = lengthdir_x(spd, dir);
             var vsp = lengthdir_y(spd, dir);
 
@@ -63,10 +77,16 @@ function EnemyAI(inst) constructor {
     __hsp = 0;
     __vsp = 0;
 
-    __panic = false;
-    __panic_timer = new Timer(3, function() {
-        __panic = false;
+    __state = false;
+    __forget_timer = new Timer(3, function() {
+        __state = EnemyAI_State.Idle;
     });
+}
+
+enum EnemyAI_State {
+    Idle,
+    Panic,
+    Hunt,
 }
 
 enum EnemyAI_Type {

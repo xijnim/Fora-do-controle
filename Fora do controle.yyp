@@ -29,6 +29,8 @@
   },
   "name":"Fora do controle",
   "resources":[
+    {"id":{"name":"obj_area_manager","path":"objects/obj_area_manager/obj_area_manager.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_doritos_path","path":"objects/obj_doritos_path/obj_doritos_path.yy",},},
     {"id":{"name":"obj_doritos","path":"objects/obj_doritos/obj_doritos.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},

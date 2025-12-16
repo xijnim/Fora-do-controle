@@ -64,11 +64,13 @@ function CharacterController(inst) constructor {
                 var eaten = enemy_x.hitbox.notify_hit(__inst);
                 if !eaten {
                     __hsp = -__hsp;
+                    __berserk_cos = -__berserk_cos;
                 }
             } else if instance_exists(enemy_y) {
                 var eaten = enemy_y.hitbox.notify_hit(__inst);
                 if !eaten {
                     __vsp = -__vsp;
+                    __berserk_sin = -__berserk_sin;
                 }
             }
         }

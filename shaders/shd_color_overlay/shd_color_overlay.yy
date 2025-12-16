@@ -3,8 +3,8 @@
   "%Name":"shd_color_overlay",
   "name":"shd_color_overlay",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Util",
+    "path":"folders/Util.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

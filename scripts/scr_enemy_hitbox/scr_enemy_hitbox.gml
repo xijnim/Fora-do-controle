@@ -5,7 +5,10 @@ function EnemyHitbox(inst) constructor {
     notify_hit = function(doritos) {
         if __inst.data.level > State.get_level() {
             var dir = point_direction(__inst.x, __inst.y, doritos.x, doritos.y);
-            doritos.take_damage(1);
+            if !State.berserk {
+                doritos.take_damage(1);
+                obj_camera.screenshake(5);
+            }
             
             return false;
         }

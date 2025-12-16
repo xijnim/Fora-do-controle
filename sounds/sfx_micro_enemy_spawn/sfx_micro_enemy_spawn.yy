@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"sfx_micro_enemy_spawn",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Enemies",
+    "path":"folders/Enemies.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

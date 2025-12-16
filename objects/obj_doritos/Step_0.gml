@@ -9,6 +9,7 @@ if State.eaten_enemies%5 == 0 && State.xp > 0 {
         State.berserk = true;
         had_berserk = true;
         character_controller.reset_berserk();
+        obj_camera.screenshake(2);
     }
 } else {
     had_berserk = false;
