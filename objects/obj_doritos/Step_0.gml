@@ -4,7 +4,7 @@ if invincible {
 
 character_controller.update();
 
-if State.eaten_enemies%5 == 0 && State.xp > 0 {
+if State.eaten_enemies%10 == 0 && State.xp > 0 {
     if !had_berserk {
         State.berserk = true;
         had_berserk = true;

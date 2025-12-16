@@ -4,9 +4,9 @@ hitbox.update();
 
 if hitbox.is_dead() {
     var xp_reward = data.xp_reward;
-    if State.berserk {
+    /*if State.berserk {
         xp_reward *= 3;
-    }
+    }*/
     State.xp += xp_reward;
     if !State.berserk {
         State.eaten_enemies += 1;

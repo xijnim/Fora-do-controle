@@ -1,7 +1,7 @@
 character_controller = new CharacterController(id);
 had_berserk = false;
 
-berserk_timer = new Timer(5, function() {
+berserk_timer = new Timer(3, function() {
     State.berserk = false;
 });
 
