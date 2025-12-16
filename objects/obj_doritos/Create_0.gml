@@ -1,4 +1,5 @@
 character_controller = new CharacterController(id);
+vfx_manager = new VfxManager();
 had_berserk = false;
 
 berserk_timer = new Timer(3, function() {
