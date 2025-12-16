@@ -20,6 +20,11 @@ function EnemyAI(inst) constructor {
 
     __get_target_spd = function() {
         var spd = 1.3;
+
+        if __inst.data.ai_type == EnemyAI_Type.SuperIdle {
+            spd = .4;
+        }
+
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
         var in_area = instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 28;
         var is_scared = __inst.data.ai_type == EnemyAI_Type.Alive && __inst.data.level <= State.get_level();
@@ -67,4 +72,5 @@ function EnemyAI(inst) constructor {
 enum EnemyAI_Type {
     Alive,
     Idle,
+    SuperIdle,
 }

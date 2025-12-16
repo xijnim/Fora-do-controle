@@ -4,7 +4,7 @@ if invincible {
 
 character_controller.update();
 
-if State.xp%5 == 0 && State.xp > 0 {
+if State.eaten_enemies%5 == 0 && State.xp > 0 {
     if !had_berserk {
         State.berserk = true;
         had_berserk = true;
@@ -16,6 +16,7 @@ if State.xp%5 == 0 && State.xp > 0 {
 
 if State.berserk {
     berserk_timer.tick();
+    path_timer.tick();
 }
 
 x = clamp(x, 0, room_width);

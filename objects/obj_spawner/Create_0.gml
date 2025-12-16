@@ -7,10 +7,58 @@ timer = new Timer(1, function() {
     var spawn_x = pos[0];
     var spawn_y = pos[1];
 
-    var type = irandom(EnemyIdx.ENUM_LENGTH-1);
+    var possibilities = array_create_ext(EnemyIdx.ENUM_LENGTH, function(i){return i})
+    possibilities = array_filter(possibilities, function(enemy_idx) {
+        if enemy_idx == EnemyIdx.CropBac || enemy_idx == EnemyIdx.Corona {
+            var bacteria_amt = __get_enemy_amt_by_type(EnemyIdx.CropBac) + __get_enemy_amt_by_type(EnemyIdx.Corona);
+            var cap = State.get_level() > 1 ? 12 : 32;
+            if bacteria_amt >= cap {
+                return false;
+            }
+        }
+        if enemy_idx == EnemyIdx.Nut {
+            var nut_amt = __get_enemy_amt_by_type(EnemyIdx.Nut);
+
+            var nut_cap = State.get_level() > 1 ? 16 : 12;
+
+            if nut_amt >= nut_cap {
+                return false;
+            }
+        }
+        if enemy_idx == EnemyIdx.Dust {
+            if State.get_level() > 1 {
+                return false;
+            }
+        }
+        if enemy_idx == EnemyIdx.Cheetos {
+            if State.get_level() < 2 {
+                return false;
+            }
+        }
+
+        return true;
+    });
+
+    if array_length(possibilities) == 0 {
+        return;
+    }
+
+    var type = array_rand(possibilities);
+
 	audio_play_sound(sfx_micro_enemy_spawn, 3, 0, .5, 0, random_range(.9, 1.1));
     instance_create_depth(spawn_x, spawn_y, 0, obj_enemy, {type});
 });
+
+__get_enemy_amt_by_type = function(search_type) {
+    var amt = 0;
+    with obj_enemy {
+        if type == search_type {
+            amt += 1;
+        }
+    }
+
+    return amt;
+}
 
 __get_spawn_pos = function() {
     var spawn_x = -1;

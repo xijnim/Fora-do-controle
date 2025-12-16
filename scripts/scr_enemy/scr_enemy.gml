@@ -2,6 +2,7 @@ function Enemy(config) constructor {
     sprite = config.sprite;
     ai_type = config.ai_type;
     level = config.level;
+    xp_reward = config.xp_reward;
 }
 
 enum EnemyIdx {
@@ -9,10 +10,9 @@ enum EnemyIdx {
     CropBac,
     Corona,
     Nut,
+    Cheetos,
 
     ENUM_LENGTH,
-
-    Cheetos,
 }
 
 global.enemies = array_create(EnemyIdx.ENUM_LENGTH, undefined);

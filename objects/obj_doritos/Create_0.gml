@@ -19,3 +19,7 @@ take_damage = function(damage, knockback=0, dir=0) {
     character_controller.add_knockback(knockback, dir);
     invincible = true;
 }
+
+path_timer = new Timer(.0001, function() {
+    instance_create_depth(x, y, 0, obj_doritos_path);
+});

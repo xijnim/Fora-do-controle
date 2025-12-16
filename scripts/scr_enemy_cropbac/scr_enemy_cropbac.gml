@@ -3,5 +3,6 @@ function __get_enemy_cropbac() {
         sprite: spr_enemy_cropbac,
         ai_type: EnemyAI_Type.Alive,
         level: 1,
+        xp_reward: 5,
     });
 }
