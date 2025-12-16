@@ -16,6 +16,25 @@ function CharacterController(inst) constructor {
                 __hsp = lerp(__hsp, 0, fric);
                 __vsp = lerp(__vsp, 0, fric);
             }
+            var predicted_x = __inst.x + __hsp;
+            var predicted_y = __inst.y + __vsp;
+            var enemy_x = noone;
+            var enemy_y = noone;
+            with __inst {
+                enemy_x = instance_place(predicted_x, y, obj_enemy);
+                enemy_y = instance_place(x, predicted_x, obj_enemy);
+            }
+            if instance_exists(enemy_x) {
+                var eaten = enemy_x.hitbox.notify_hit(__inst);
+                if !eaten {
+                    __knockback_x = 10 * -sign(__hsp);
+                }
+            } else if instance_exists(enemy_y) {
+                var eaten = enemy_y.hitbox.notify_hit(__inst);
+                if !eaten {
+                    __knockback_y = 10 * -sign(__vsp);
+                }
+            }
         } else {
             var spd = 10;
             var target_hsp = spd*__berserk_cos;
@@ -32,10 +51,30 @@ function CharacterController(inst) constructor {
 
             __hsp = lerp(__hsp, target_hsp, .6);
             __vsp = lerp(__vsp, target_vsp, .6);
+
+            var predicted_x = __inst.x + __hsp;
+            var predicted_y = __inst.y + __vsp;
+            var enemy_x = noone;
+            var enemy_y = noone;
+            with __inst {
+                enemy_x = instance_place(predicted_x, y, obj_enemy);
+                enemy_y = instance_place(x, predicted_x, obj_enemy);
+            }
+            if instance_exists(enemy_x) {
+                var eaten = enemy_x.hitbox.notify_hit(__inst);
+                if !eaten {
+                    __hsp = -__hsp;
+                }
+            } else if instance_exists(enemy_y) {
+                var eaten = enemy_y.hitbox.notify_hit(__inst);
+                if !eaten {
+                    __vsp = -__vsp;
+                }
+            }
         }
 
-        __knockback_x = lerp(__knockback_x, 0, .05);
-        __knockback_y = lerp(__knockback_y, 0, .05);
+        __knockback_x = lerp(__knockback_x, 0, .1);
+        __knockback_y = lerp(__knockback_y, 0, .1);
 
         __inst.x += __hsp + __knockback_x;
         __inst.y += __vsp + __knockback_y;

@@ -8,7 +8,9 @@ if hitbox.is_dead() {
         xp_reward *= 3;
     }
     State.xp += xp_reward;
-    State.eaten_enemies += 1;
+    if !State.berserk {
+        State.eaten_enemies += 1;
+    }
 	audio_play_sound(sfx_player_eat, 2, 0, .7, 0, random_range(.9, 1.1));
     instance_destroy();
 }
