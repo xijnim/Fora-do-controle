@@ -24,6 +24,9 @@ x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
 if State.get_level() > 1 {
+    if sprite_index == spr_doritos && room != rm_table {
+        room_goto(rm_table);
+    }
     sprite_index = spr_doritos2;
 } else {
     sprite_index = spr_doritos;
