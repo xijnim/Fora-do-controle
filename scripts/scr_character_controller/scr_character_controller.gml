@@ -52,13 +52,13 @@ function CharacterController(inst) constructor {
             __hsp = lerp(__hsp, target_hsp, .6);
             __vsp = lerp(__vsp, target_vsp, .6);
 
-            var predicted_x = __inst.x + __hsp;
-            var predicted_y = __inst.y + __vsp;
+            var predicted_x = __inst.x + target_hsp;
+            var predicted_y = __inst.y + target_vsp;
             var enemy_x = noone;
             var enemy_y = noone;
             with __inst {
                 enemy_x = instance_place(predicted_x, y, obj_enemy);
-                enemy_y = instance_place(x, predicted_x, obj_enemy);
+                enemy_y = instance_place(x, predicted_y, obj_enemy);
             }
             if instance_exists(enemy_x) {
                 var eaten = enemy_x.hitbox.notify_hit(__inst);
