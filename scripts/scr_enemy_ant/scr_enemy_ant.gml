@@ -7,6 +7,7 @@ function __get_enemy_ant() {
         can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 1),
         xp_reward: 10,
         is_aggressive: true,
+		repel: false
     });
 }
 
