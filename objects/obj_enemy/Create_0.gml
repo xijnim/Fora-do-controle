@@ -2,7 +2,9 @@ type = self[$ "type"] ?? EnemyIdx.CropBac;
 data = global.enemies[type];
 sprite_index = data.sprite;
 
-ai = new EnemyAI(id);
+show_debug_message(type);
+
+strategy = data.make_strategy(id);
 hitbox = new EnemyHitbox(id);
 
 vfx_manager = new VfxManager();

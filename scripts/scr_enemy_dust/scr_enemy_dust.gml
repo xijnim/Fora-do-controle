@@ -1,8 +1,12 @@
 function __get_enemy_dust() {
     return new Enemy({
         sprite: spr_enemy_dust,
-        ai_type: EnemyAI_Type.Idle,
+        make_strategy: function(inst) {
+            return new EnemyIdleStrategy(inst);
+        },
         level: 1,
         xp_reward: 1,
     });
 }
+
+

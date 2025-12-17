@@ -23,8 +23,8 @@
   ],
   "name":"rm_gamepad",
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Areas",
+    "path":"folders/Areas.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

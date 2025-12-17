@@ -9,9 +9,9 @@ function __State() constructor {
         return 3;
     }
 
-    xp = 0;
+    xp = 100;
     berserk = false;
-    eaten_enemies = 0;
+    berserk_progress = 0;
 }
 
 globalvar State;
