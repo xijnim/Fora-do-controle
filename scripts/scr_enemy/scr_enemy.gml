@@ -12,6 +12,7 @@ enum EnemyIdx {
     CropBac,
     Corona,
     Nut,
+	Mini_Nut,
     Cheetos,
 	Cheese,
 	Sugar,
@@ -28,6 +29,7 @@ global.enemies[EnemyIdx.CropBac] = __get_enemy_cropbac();
 global.enemies[EnemyIdx.Corona] = __get_enemy_corona();
 global.enemies[EnemyIdx.Cheetos] = __get_enemy_cheetos();
 global.enemies[EnemyIdx.Nut] = __get_enemy_nut();
+global.enemies[EnemyIdx.Mini_Nut] = __get_enemy_mini_nut();
 global.enemies[EnemyIdx.Cheese] = __get_enemy_cheese();
 global.enemies[EnemyIdx.Sugar] = __get_enemy_sugar();
 global.enemies[EnemyIdx.Chocolate] = __get_enemy_chocolate();
