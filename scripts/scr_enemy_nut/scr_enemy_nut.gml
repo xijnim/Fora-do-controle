@@ -2,7 +2,7 @@ function __get_enemy_nut() {
     return new Enemy({
         sprite: spr_enemy_nut,
         make_strategy: function(inst) {
-            return new EnemyAliveStrategy(inst);
+            return new EnemyAggressiveStrategy(inst);
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Nut, 1, 8),
         is_aggressive: true,

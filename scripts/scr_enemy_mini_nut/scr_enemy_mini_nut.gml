@@ -5,7 +5,6 @@ function __get_enemy_mini_nut() {
             return new EnemyAliveStrategy(inst);
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Mini_Nut, 2, 4),
-        level: 2,
         xp_reward: 10,
     });
 }
