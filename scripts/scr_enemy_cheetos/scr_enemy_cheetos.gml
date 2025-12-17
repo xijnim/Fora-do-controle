@@ -2,7 +2,7 @@ function __get_enemy_cheetos() {
     return new Enemy({
         sprite: spr_enemy_cheetos,
         make_strategy: function(inst) {
-            return new EnemyIdleStrategy(inst);
+            return new EnemyIdleStrategy(inst, 0);
         },
         level: 3,
         xp_reward: 10,
