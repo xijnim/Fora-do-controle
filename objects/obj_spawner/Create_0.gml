@@ -31,13 +31,7 @@ timer = new Timer(1, function() {
             }
         }
         if enemy_idx == EnemyIdx.Cheetos {
-            if State.get_level() < 2 {
-                return false;
-            }
-            var amt = __get_enemy_amt_by_type(EnemyIdx.Cheetos);
-            if amt >= 5 {
-                return false;
-            }
+            return false;
         }
         if enemy_idx == EnemyIdx.Ant {
             if State.get_level() < 2 {
