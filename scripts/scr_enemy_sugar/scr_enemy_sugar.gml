@@ -4,7 +4,6 @@ function __get_enemy_sugar() {
         make_strategy: function(inst) {
             return new EnemySugarStrategy(inst);
         },
-        level: 2,
         can_spawn: spawn_cap_cond(EnemyIdx.Sugar, 2, 16),
         xp_reward: 10,
     });

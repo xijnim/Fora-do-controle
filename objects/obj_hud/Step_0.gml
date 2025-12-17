@@ -5,5 +5,7 @@ with obj_doritos {
     }
 }
 
+global.flash = lerp(global.flash, 0, .1);
+
 level_bar.update(alpha);
 berserk_bar.update(alpha);

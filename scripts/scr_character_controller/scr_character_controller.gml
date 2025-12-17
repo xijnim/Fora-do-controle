@@ -21,8 +21,8 @@ function CharacterController(inst) constructor {
             var enemy_x = noone;
             var enemy_y = noone;
             with __inst {
-                enemy_x = instance_place(predicted_x, y, obj_enemy);
-                enemy_y = instance_place(x, predicted_y, obj_enemy);
+                enemy_x = instance_place(predicted_x, y, [obj_enemy, obj_solid]);
+                enemy_y = instance_place(x, predicted_y, [obj_enemy, obj_solid]);
             }
             if instance_exists(enemy_x) {
                 var eaten = enemy_x.hitbox.notify_hit(__inst);
@@ -57,8 +57,8 @@ function CharacterController(inst) constructor {
             var enemy_x = noone;
             var enemy_y = noone;
             with __inst {
-                enemy_x = instance_place(predicted_x, y, obj_enemy);
-                enemy_y = instance_place(x, predicted_y, obj_enemy);
+                enemy_x = instance_place(predicted_x, y, [obj_enemy, obj_solid]);
+                enemy_y = instance_place(x, predicted_y, [obj_enemy, obj_solid]);
             }
             if instance_exists(enemy_x) {
                 var eaten = enemy_x.hitbox.notify_hit(__inst);

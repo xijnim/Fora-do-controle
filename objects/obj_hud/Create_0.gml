@@ -1,10 +1,10 @@
-var start_y = 30;
+var start_y = 16;
 level_bar = new HudBar({
     bar_sprite: spr_level_bar,
     inner_sprite: spr_level_bar_inner,
     text_sprite: spr_level_text,
     pos_y: start_y,
-    get: function(){return State.get_level()/5},
+    get: function(){return State.get_progression()},
 });
 berserk_bar = new HudBar({
     bar_sprite: spr_berserk_bar,

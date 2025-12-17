@@ -9,7 +9,7 @@ function HudBar(config) constructor {
         GET_GUI_SIZE;
 
         var pos_x = gui_w*.5;
-        var pos_y = __pos_y;
+        var pos_y = gui_h-__pos_y;
         var alpha = __alpha;
 
         draw_sprite_ext(__bar_sprite, 0, pos_x, pos_y, 1, 1, 0, c_white, alpha);
@@ -32,4 +32,6 @@ function HudBar(config) constructor {
     __alpha = 1;
 }
 display_set_gui_size(640, 360);
+
+global.flash = 0;
 

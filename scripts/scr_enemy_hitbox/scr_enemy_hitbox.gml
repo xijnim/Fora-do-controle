@@ -1,11 +1,10 @@
-function EnemyHitbox(inst) constructor {
+function EnemyHitbox(inst, is_aggressive, damage=true) constructor {
     update = function() {
     }
 
     notify_hit = function(doritos) {
-        if __inst.data.level > State.get_level() {
-            var dir = point_direction(__inst.x, __inst.y, doritos.x, doritos.y);
-            if !State.berserk && __inst.data.is_aggressive {
+        if __is_aggressive {
+            if !State.berserk && __damage {
                 doritos.take_damage(1);
                 obj_camera.screenshake(5);
             }
@@ -21,6 +20,8 @@ function EnemyHitbox(inst) constructor {
         return __dead;
     }
 
+    __is_aggressive = is_aggressive;
+    __damage = damage;
     __inst = inst;
     __dead = false;
 }

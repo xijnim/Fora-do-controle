@@ -74,15 +74,8 @@ function AliveThought(inst) constructor {
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
         var in_area = instance_exists(doritos) && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 48;
         if in_area {
-            if __inst.data.level > State.get_level() {
-                if !State.berserk {
-                    __state = EnemyAI_State.Hunt;
-                    __forget_timer.reset();
-                }
-            } else {
-                __state = EnemyAI_State.Panic;
-                __forget_timer.reset();
-            }
+            __state = EnemyAI_State.Panic;
+            __forget_timer.reset();
         }
         if __state == EnemyAI_State.Panic {
             var dir = point_direction(doritos.x, doritos.y, __inst.x, __inst.y);

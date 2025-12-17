@@ -1,4 +1,5 @@
 if invincible {
+    flash_timer.tick();
     invincible_timer.tick();
 }
 

@@ -1,29 +1,47 @@
 function __State() constructor {
-    get_level = function() {
-        var actual_level = __get_actual_level();
-        if actual_level > __prev_level {
-            __prev_level = actual_level;
+    update = function() {
+        if array_length(__table) == 0 {
+            return;
         }
-
-        return max(__prev_level,  actual_level);
+        
+        var price = __table[0];
+        if xp >= price {
+            xp -= price;
+            __level += 1;
+            global.flash = 1;
+            array_delete(__table, 0, 1);
+        }
     }
 
-    __get_actual_level = function() {
-        if xp < 100 {
+    get_level = function() {
+        return __level;
+    }
+
+    get_progression = function() {
+        if array_length(__table) == 0 {
             return 1;
         }
-        if xp < 1000 {
-            return 2;
-        }
-        return 3;
+
+        return xp / __table[0];
     }
-    xp = 100;
+
+    xp = 0;
     berserk = false;
     berserk_progress = 0;
     
-    __prev_level = 0;
+    __level = 1;
+    __table = [
+        100,
+        1000,
+    ];
 }
 
 globalvar State;
 State = new __State();
 
+call_later(
+    1, time_source_units_frames,
+    function() {
+        State.update();
+    }, true
+);

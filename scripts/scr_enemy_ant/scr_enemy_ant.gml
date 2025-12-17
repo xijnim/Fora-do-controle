@@ -5,8 +5,8 @@ function __get_enemy_ant() {
             return new EnemyAntStrategy(inst);
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 1),
-        level: 3,
         xp_reward: 10,
+        is_aggressive: true,
     });
 }
 

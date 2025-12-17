@@ -19,6 +19,19 @@ if type == EnemyIdx.Sugar {
     }
 }
 
+hsp = lerp(hsp, 0, .1);
+vsp = lerp(vsp, 0, .1);
+
+x += hsp;
+y += vsp;
+
+var enemy = instance_place(x, y, obj_enemy);
+if instance_exists(enemy) && data.repel {
+    var dir = point_direction(x, y, enemy.x, enemy.y)+180;
+    hsp += lengthdir_x(3, dir);
+    vsp += lengthdir_y(3, dir);
+}
+
 if is_dead {
     var xp_reward = data.xp_reward;
     /*if State.berserk {
