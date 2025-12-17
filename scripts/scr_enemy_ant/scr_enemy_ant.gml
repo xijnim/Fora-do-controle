@@ -4,7 +4,7 @@ function __get_enemy_ant() {
         make_strategy: function(inst) {
             return new EnemyAntStrategy(inst);
         },
-        can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 2),
+        can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 1),
         level: 3,
         xp_reward: 10,
     });

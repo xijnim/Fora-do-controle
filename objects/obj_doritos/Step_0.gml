@@ -24,11 +24,14 @@ if State.berserk {
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
-if State.get_level() > 1 {
-    if sprite_index == spr_doritos && room != rm_table {
-        room_goto(rm_table);
-    }
-    sprite_index = spr_doritos2;
-} else {
-    sprite_index = spr_doritos;
+var progress_table = [
+    [spr_doritos, rm_gamepad],
+    [spr_doritos2, rm_gamepad_bigger],
+    [spr_doritos2, rm_table],
+];
+
+var progress = progress_table[State.get_level()-1];
+sprite_index = progress[0];
+if room != progress[1] {
+    room_goto(progress[1]);
 }
