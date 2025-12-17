@@ -2,7 +2,7 @@ character_controller = new CharacterController(id);
 vfx_manager = new VfxManager();
 had_berserk = false;
 
-berserk_timer = new Timer(3, function() {
+berserk_timer = new Timer(5, function() {
     State.berserk = false;
     State.berserk_progress = 0;
 });

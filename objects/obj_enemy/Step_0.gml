@@ -7,7 +7,7 @@ y = clamp(y, 0, room_height);
 
 var is_dead = hitbox.is_dead();
 
-if type == EnemyIdx.Sugar {
+if type == EnemyIdx.Sugar || EnemyIdx.Cheese {
     var meeting_ant = false;
     with obj_enemy {
         if type == EnemyIdx.Ant && place_meeting(x, y, other) {
