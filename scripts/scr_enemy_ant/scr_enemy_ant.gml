@@ -4,7 +4,7 @@ function __get_enemy_ant() {
         make_strategy: function(inst) {
             return new EnemyAntStrategy(inst);
         },
-        can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 1),
+		can_spawn: spawn_cap_cond(EnemyIdx.Chocolate, 2, 1),
         level: 3,
         xp_reward: 10,
     });
@@ -16,7 +16,7 @@ function EnemyAntStrategy(inst) constructor {
 
         var sugar = noone;
         with obj_enemy {
-            if type == EnemyIdx.Sugar && point_distance(x, y, other.__inst.x, other.__inst.y) < 64 {
+            if type == EnemyIdx.Sugar && point_distance(x, y, other.__inst.x, other.__inst.y) < 96 {
                 sugar = id;
             }
         }
