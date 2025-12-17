@@ -8,7 +8,7 @@ berserk_timer = new Timer(3, function() {
 });
 
 invincible = false;
-invincible_timer = new Timer(1, function() {
+invincible_timer = new Timer(.5, function() {
     invincible = false;
     flash = false;
 });
