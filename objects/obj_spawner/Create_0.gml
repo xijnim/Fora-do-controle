@@ -19,7 +19,7 @@ timer = new Timer(1, function() {
         if enemy_idx == EnemyIdx.Nut {
             var nut_amt = __get_enemy_amt_by_type(EnemyIdx.Nut);
 
-            var nut_cap = State.get_level() > 1 ? 10 : 8;
+            var nut_cap = State.get_level() > 1 ? 4 : 8;
 
             if nut_amt >= nut_cap {
                 return false;
@@ -38,16 +38,25 @@ timer = new Timer(1, function() {
                 return false;
             }
             var amt = __get_enemy_amt_by_type(EnemyIdx.Ant);
-            if amt >= 2 {
+            if amt >= 1 {
                 return false;
             }
         }
-        if enemy_idx == EnemyIdx.Cheese || enemy_idx == EnemyIdx.Sugar {
+        if enemy_idx == EnemyIdx.Cheese {
             if State.get_level() < 2 {
                 return false;
             }
-            var amt = __get_enemy_amt_by_type(EnemyIdx.Cheese) + __get_enemy_amt_by_type(EnemyIdx.Sugar);
-            if amt >= 26 {
+            var amt = __get_enemy_amt_by_type(EnemyIdx.Cheese);
+            if amt >= 10 {
+                return false;
+            }
+        }
+		 if  enemy_idx == EnemyIdx.Sugar {
+            if State.get_level() < 2 {
+                return false;
+            }
+            var amt = __get_enemy_amt_by_type(EnemyIdx.Sugar);
+            if amt >= 16 {
                 return false;
             }
         }
@@ -56,7 +65,7 @@ timer = new Timer(1, function() {
                 return false;
             }
             var amt = __get_enemy_amt_by_type(EnemyIdx.Chocolate);
-            if amt >= 10 {
+            if amt >= 4 {
                 return false;
             }
         }

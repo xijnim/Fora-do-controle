@@ -9,7 +9,7 @@ function __State() constructor {
         return 3;
     }
 
-    xp = 100;
+    xp = 00;
     berserk = false;
     berserk_progress = 0;
 }
