@@ -42,8 +42,8 @@ function EnemyAntStrategy(inst) constructor {
         } else {
             var dir = point_direction(__inst.x, __inst.y, __target_inst.x, __target_inst.y);
             __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
-            __hsp = lerp(__hsp, lengthdir_x(1.5, dir), .3);
-            __vsp = lerp(__vsp, lengthdir_y(1.5, dir), .3);
+            __hsp = lerp(__hsp, lengthdir_x(1.7, dir), .3);
+            __vsp = lerp(__vsp, lengthdir_y(1.7, dir), .3);
         }
 
         __inst.x += __hsp;
