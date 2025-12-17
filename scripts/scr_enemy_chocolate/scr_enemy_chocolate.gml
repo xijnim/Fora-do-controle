@@ -3,6 +3,6 @@ function __get_enemy_chocolate() {
         sprite: spr_enemy_chocolate,
         ai_type: EnemyAI_Type.SuperIdle,
         level: 2,
-        xp_reward: 20,
+        xp_reward: 25,
     });
 }

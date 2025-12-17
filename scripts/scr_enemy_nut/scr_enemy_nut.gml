@@ -3,6 +3,6 @@ function __get_enemy_nut() {
         sprite: spr_enemy_nut,
         ai_type: EnemyAI_Type.Alive,
         level: 2,
-        xp_reward: 20,
+        xp_reward: 25,
     });
 }
