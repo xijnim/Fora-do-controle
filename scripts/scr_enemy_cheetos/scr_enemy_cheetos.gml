@@ -4,6 +4,7 @@ function __get_enemy_cheetos() {
         make_strategy: function(inst) {
             return new EnemyIdleStrategy(inst, 0);
         },
+        can_spawn: spawn_never_cond,
         level: 3,
         xp_reward: 10,
         is_aggressive: false,

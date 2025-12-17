@@ -3,6 +3,7 @@ function Enemy(config) constructor {
     make_strategy = config.make_strategy;
     level = config.level;
     xp_reward = config.xp_reward;
+    can_spawn = config.can_spawn;
     is_aggressive = config[$ "is_aggressive"] ?? true;
 }
 

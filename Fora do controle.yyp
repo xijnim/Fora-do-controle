@@ -73,6 +73,7 @@
     {"id":{"name":"shd_color_overlay","path":"shaders/shd_color_overlay/shd_color_overlay.yy",},},
     {"id":{"name":"sfx_micro_enemy_spawn","path":"sounds/sfx_micro_enemy_spawn/sfx_micro_enemy_spawn.yy",},},
     {"id":{"name":"sfx_player_eat","path":"sounds/sfx_player_eat/sfx_player_eat.yy",},},
+    {"id":{"name":"spr_background_gamepad_bigger","path":"sprites/spr_background_gamepad_bigger/spr_background_gamepad_bigger.yy",},},
     {"id":{"name":"spr_background_gamepad","path":"sprites/spr_background_gamepad/spr_background_gamepad.yy",},},
     {"id":{"name":"spr_background_table","path":"sprites/spr_background_table/spr_background_table.yy",},},
     {"id":{"name":"spr_berserk_bar_inner","path":"sprites/spr_berserk_bar_inner/spr_berserk_bar_inner.yy",},},
