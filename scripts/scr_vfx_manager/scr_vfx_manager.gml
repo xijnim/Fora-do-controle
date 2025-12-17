@@ -88,8 +88,8 @@ function JumpVfxManager() constructor {
 
 function ScaleManager(config={}) constructor {
     static update = function() {
-        __.xscale_spd = lerp(__.xscale_spd, -__.xscale_add*.7, .2);
-        __.yscale_spd = lerp(__.yscale_spd, -__.yscale_add*.7, .2);
+        __.xscale_spd = lerp(__.xscale_spd, -__.xscale_add, .2);
+        __.yscale_spd = lerp(__.yscale_spd, -__.yscale_add, .2);
         __.xscale_add += __.xscale_spd;
         __.yscale_add += __.yscale_spd;
         

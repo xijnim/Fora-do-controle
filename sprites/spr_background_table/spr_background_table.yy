@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Areas",
+    "path":"folders/Areas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

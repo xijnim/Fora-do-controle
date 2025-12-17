@@ -4,6 +4,7 @@ had_berserk = false;
 
 berserk_timer = new Timer(3, function() {
     State.berserk = false;
+    State.berserk_progress = 0;
 });
 
 invincible = false;

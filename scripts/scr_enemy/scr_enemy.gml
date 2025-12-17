@@ -1,8 +1,9 @@
 function Enemy(config) constructor {
     sprite = config.sprite;
-    ai_type = config.ai_type;
+    make_strategy = config.make_strategy;
     level = config.level;
     xp_reward = config.xp_reward;
+    is_aggressive = config[$ "is_aggressive"] ?? true;
 }
 
 enum EnemyIdx {
@@ -13,6 +14,7 @@ enum EnemyIdx {
     Cheetos,
 	Cheese,
 	Sugar,
+    Ant,
 	Chocolate,
 
     ENUM_LENGTH,
@@ -28,6 +30,7 @@ global.enemies[EnemyIdx.Nut] = __get_enemy_nut();
 global.enemies[EnemyIdx.Cheese] = __get_enemy_cheese();
 global.enemies[EnemyIdx.Sugar] = __get_enemy_sugar();
 global.enemies[EnemyIdx.Chocolate] = __get_enemy_chocolate();
+global.enemies[EnemyIdx.Ant] = __get_enemy_ant();
 
 array_foreach(global.enemies, function(enemy) {
     assert_exists(enemy);

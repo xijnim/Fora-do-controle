@@ -9,8 +9,8 @@
   "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"Fora do controle",
-    "path":"Fora do controle.yyp",
+    "name":"Areas",
+    "path":"folders/Areas.yy",
   },
   "parentObjectId":null,
   "persistent":false,

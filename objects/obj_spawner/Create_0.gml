@@ -34,8 +34,17 @@ timer = new Timer(1, function() {
             if State.get_level() < 2 {
                 return false;
             }
-            var amt = __get_enemy_amt_by_type(EnemyIdx.Chocolate);
+            var amt = __get_enemy_amt_by_type(EnemyIdx.Cheetos);
             if amt >= 5 {
+                return false;
+            }
+        }
+        if enemy_idx == EnemyIdx.Ant {
+            if State.get_level() < 2 {
+                return false;
+            }
+            var amt = __get_enemy_amt_by_type(EnemyIdx.Ant);
+            if amt >= 2 {
                 return false;
             }
         }
