@@ -4,9 +4,7 @@ function __get_enemy_dust() {
         make_strategy: function(inst) {
             return new EnemyIdleStrategy(inst);
         },
-        can_spawn: function() {
-            return State.get_level() == 1;
-        },
+		can_spawn: spawn_cap_cond(EnemyIdx.Dust, 1, 12),
         xp_reward: 1,
     });
 }

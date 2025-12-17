@@ -16,7 +16,7 @@ function EnemyAntStrategy(inst) constructor {
 
         var sugar = noone;
         with obj_enemy {
-            if type == EnemyIdx.Sugar && point_distance(x, y, other.__inst.x, other.__inst.y) < 96 {
+            if type == EnemyIdx.Sugar || type == EnemyIdx.Cheese && point_distance(x, y, other.__inst.x, other.__inst.y) < 96 {
                 sugar = id;
             }
         }

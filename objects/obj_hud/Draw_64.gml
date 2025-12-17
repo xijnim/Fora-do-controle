@@ -1,5 +1,5 @@
-level_bar.render();
 berserk_bar.render();
+level_bar.render();
 
 GET_GUI_SIZE;
 var limit = 20000;
