@@ -78,8 +78,11 @@ function CharacterController(inst) constructor {
         __knockback_x = lerp(__knockback_x, 0, .1);
         __knockback_y = lerp(__knockback_y, 0, .1);
 
-        __inst.x += __hsp + __knockback_x;
-        __inst.y += __vsp + __knockback_y;
+        var hsp = __hsp + __knockback_x;
+        var vsp = __vsp + __knockback_y;
+        with __inst {
+            move_and_collide(hsp, vsp, [obj_sofa, obj_tv, obj_gamer_table]);
+        }
     }
 
     add_knockback = function(spd, dir) {

@@ -28,7 +28,7 @@
   ],
   "name":"spr_enemy_gamer",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"Gamer",
     "path":"folders/Enemies/Gamer.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":24,
-    "yorigin":37,
+    "yorigin":75,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

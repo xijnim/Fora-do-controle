@@ -29,7 +29,12 @@ var progress_table = [
     [spr_doritos, rm_gamepad],
     [spr_doritos2, rm_gamepad_bigger],
     [spr_doritos2, rm_table],
+    [spr_doritos2, rm_house],
 ];
+
+if room == rm_house {
+    depth = -bbox_bottom;
+}
 
 var progress = progress_table[State.get_level()-1];
 sprite_index = progress[0];

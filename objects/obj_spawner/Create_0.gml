@@ -2,6 +2,9 @@ timer = new Timer(1, function() {
 	if instance_number(obj_enemy) >= 64 {
 		return;
 	}
+    if State.get_level() == 4 {
+        return;
+    }
 
     var pos = __get_spawn_pos();
     var spawn_x = pos[0];
