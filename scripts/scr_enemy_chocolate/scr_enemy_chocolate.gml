@@ -5,6 +5,6 @@ function __get_enemy_chocolate() {
             return new EnemyAliveStrategy(inst);
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Chocolate, 2, 4),
-        xp_reward: 25,
+        xp_reward: 50,
     });
 }

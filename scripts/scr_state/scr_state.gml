@@ -25,7 +25,7 @@ function __State() constructor {
         return xp / __table[0];
     }
 
-    xp = 00;
+    xp = 800;
     berserk = false;
     berserk_progress = 0;
     
@@ -33,6 +33,7 @@ function __State() constructor {
     __table = [
         80,
         800,
+		4000,
     ];
 }
 

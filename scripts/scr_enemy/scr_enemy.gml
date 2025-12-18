@@ -17,6 +17,7 @@ enum EnemyIdx {
 	Cheese,
 	Sugar,
     Ant,
+	Mini_Ant,
 	Chocolate,
 
     ENUM_LENGTH,
@@ -34,6 +35,7 @@ global.enemies[EnemyIdx.Cheese] = __get_enemy_cheese();
 global.enemies[EnemyIdx.Sugar] = __get_enemy_sugar();
 global.enemies[EnemyIdx.Chocolate] = __get_enemy_chocolate();
 global.enemies[EnemyIdx.Ant] = __get_enemy_ant();
+global.enemies[EnemyIdx.Mini_Ant] = __get_enemy_mini_ant();
 
 array_foreach(global.enemies, function(enemy) {
     assert_exists(enemy);
