@@ -7,7 +7,8 @@ function __get_enemy_ant() {
         can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 1),
         xp_reward: 10,
         is_aggressive: true,
-		repel: false
+		repel: false,
+        victims: [EnemyIdx.Sugar],
     });
 }
 
@@ -17,7 +18,7 @@ function EnemyAntStrategy(inst) constructor {
 
         var sugar = noone;
         with obj_enemy {
-            if type == EnemyIdx.Sugar || type == EnemyIdx.Cheese && point_distance(x, y, other.__inst.x, other.__inst.y) < 96 {
+            if array_contains(other.__inst.data.victims, type) && point_distance(x, y, other.__inst.x, other.__inst.y) < 96 {
                 sugar = id;
             }
         }
@@ -29,8 +30,7 @@ function EnemyAntStrategy(inst) constructor {
 
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
         if instance_exists(doritos) 
-            && State.get_level() < 3
-            && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 48 {
+            && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 64 {
             __target_inst = doritos;
             __forget_timer.reset();
         }
@@ -41,6 +41,9 @@ function EnemyAntStrategy(inst) constructor {
             __vsp = lerp(__vsp, spd[1], .6);
         } else {
             var dir = point_direction(__inst.x, __inst.y, __target_inst.x, __target_inst.y);
+            if __target_inst.object_index == obj_doritos && !__inst.data.is_aggressive {
+                dir += 180;
+            }
             __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
             __hsp = lerp(__hsp, lengthdir_x(1.7, dir), .3);
             __vsp = lerp(__vsp, lengthdir_y(1.7, dir), .3);

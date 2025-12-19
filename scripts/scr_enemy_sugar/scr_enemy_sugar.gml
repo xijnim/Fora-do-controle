@@ -30,7 +30,7 @@ function EnemySugarStrategy(inst) constructor {
         var ant = noone;
         with obj_enemy {
             var dist = point_distance(x, y, other.__inst.x, other.__inst.y);
-            if type == EnemyIdx.Ant && dist < 48 {
+            if array_contains(data.victims, other.__inst.type) && dist < 48 {
                 ant = id;
             }
         }

@@ -5,6 +5,7 @@ function Enemy(config) constructor {
     can_spawn = config.can_spawn;
     is_aggressive = config[$ "is_aggressive"] ?? false;
     repel = config[$ "repel"] ?? true;
+    victims = config[$ "victims"] ?? [];
 }
 
 enum EnemyIdx {
@@ -20,6 +21,7 @@ enum EnemyIdx {
 	Mini_Ant,
 	Chocolate,
     Car,
+    Spider,
 
     ENUM_LENGTH,
 }
@@ -38,6 +40,7 @@ global.enemies[EnemyIdx.Chocolate] = __get_enemy_chocolate();
 global.enemies[EnemyIdx.Ant] = __get_enemy_ant();
 global.enemies[EnemyIdx.Mini_Ant] = __get_enemy_mini_ant();
 global.enemies[EnemyIdx.Car] = __get_enemy_car();
+global.enemies[EnemyIdx.Spider] = __get_enemy_spider();
 
 array_foreach(global.enemies, function(enemy) {
     assert_exists(enemy);

@@ -9,16 +9,14 @@ if type != EnemyIdx.Mini_Ant  {
 
 var is_dead = hitbox.is_dead();
 
-if type == EnemyIdx.Sugar || EnemyIdx.Cheese {
-    var meeting_ant = false;
-    with obj_enemy {
-        if type == EnemyIdx.Ant && place_meeting(x, y, other) {
-            meeting_ant = true;
-        }
+var meeting_predator = false;
+with obj_enemy {
+    if array_contains(data.victims, other.type) && place_meeting(x, y, other) {
+        meeting_predator = true;
     }
-    if meeting_ant {
-        is_dead = true;
-    }
+}
+if meeting_predator {
+    is_dead = true;
 }
 
 hsp = lerp(hsp, 0, .1);
@@ -43,12 +41,11 @@ if instance_exists(solid_inst) {
 
 if is_dead {
     var xp_reward = data.xp_reward;
-    /*if State.berserk {
-        xp_reward *= 3;
-    }*/
-    State.xp += xp_reward;
-    if !State.berserk {
-        State.berserk_progress += 1;
+    if !meeting_predator {
+        State.xp += xp_reward;
+        if !State.berserk {
+            State.berserk_progress += 1;
+        }
     }
     with obj_doritos {
         vfx_manager.add_angle(40);
