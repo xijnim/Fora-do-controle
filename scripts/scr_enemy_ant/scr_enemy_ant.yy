@@ -6,7 +6,7 @@
   "name":"scr_enemy_ant",
   "parent":{
     "name":"Ant",
-    "path":"folders/Enemies/Ant.yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Ant.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

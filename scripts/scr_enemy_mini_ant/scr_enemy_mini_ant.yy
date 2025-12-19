@@ -6,7 +6,7 @@
   "name":"scr_enemy_mini_ant",
   "parent":{
     "name":"Ant (Mini Version)",
-    "path":"folders/Enemies/Ant (Mini Version).yy",
+    "path":"folders/Enemies/Area 3 (Table)/Ant (Mini Version).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

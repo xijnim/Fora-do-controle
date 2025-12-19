@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Dust",
-    "path":"folders/Enemies/Dust.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Dust.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

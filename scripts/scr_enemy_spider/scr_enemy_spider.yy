@@ -6,7 +6,7 @@
   "name":"scr_enemy_spider",
   "parent":{
     "name":"Spider",
-    "path":"folders/Enemies/Spider.yy",
+    "path":"folders/Enemies/Area 3 (Table)/Spider.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

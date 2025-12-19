@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Chocolate",
-    "path":"folders/Enemies/Chocolate.yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Chocolate.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

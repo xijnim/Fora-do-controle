@@ -6,7 +6,7 @@
   "name":"scr_enemy_cropbac",
   "parent":{
     "name":"Cropbac",
-    "path":"folders/Enemies/Cropbac.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Cropbac.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

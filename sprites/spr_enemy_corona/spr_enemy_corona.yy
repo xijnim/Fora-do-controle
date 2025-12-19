@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Corona",
-    "path":"folders/Enemies/Corona.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Corona.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

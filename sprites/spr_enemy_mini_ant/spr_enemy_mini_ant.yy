@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Ant (Mini Version)",
-    "path":"folders/Enemies/Ant (Mini Version).yy",
+    "path":"folders/Enemies/Area 3 (Table)/Ant (Mini Version).yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

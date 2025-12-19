@@ -6,7 +6,7 @@
   "name":"scr_enemy_chocolate",
   "parent":{
     "name":"Chocolate",
-    "path":"folders/Enemies/Chocolate.yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Chocolate.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

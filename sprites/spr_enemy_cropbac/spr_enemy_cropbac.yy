@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Cropbac",
-    "path":"folders/Enemies/Cropbac.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Cropbac.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

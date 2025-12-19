@@ -6,7 +6,7 @@
   "name":"scr_enemy_gamer",
   "parent":{
     "name":"Gamer",
-    "path":"folders/Areas/House/Gamer.yy",
+    "path":"folders/Enemies/Area 4 (House)/Gamer.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

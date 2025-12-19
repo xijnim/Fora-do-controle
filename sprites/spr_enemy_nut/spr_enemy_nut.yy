@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Nut",
-    "path":"folders/Enemies/Nut.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Nut.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

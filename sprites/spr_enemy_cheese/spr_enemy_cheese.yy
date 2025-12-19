@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Cheese",
-    "path":"folders/Enemies/Cheese.yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Cheese.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -42,8 +42,8 @@ function EnemyMiniAntStrategy(inst) constructor {
         } else {
             var dir = point_direction(__inst.x, __inst.y, __predator.x, __predator.y)+180;
             __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
-            __hsp = lerp(__hsp, lengthdir_x(1.7, dir), .3);
-            __vsp = lerp(__vsp, lengthdir_y(1.7, dir), .3);
+            __hsp = lerp(__hsp, lengthdir_x(1.5, dir), .3);
+            __vsp = lerp(__vsp, lengthdir_y(1.5, dir), .3);
         }
 
         __inst.x += __hsp;
@@ -55,7 +55,7 @@ function EnemyMiniAntStrategy(inst) constructor {
     __predator = noone;
     __hsp = 0;
     __vsp = 0;
-    __forget_timer = new Timer(4, function() {
+    __forget_timer = new Timer(3, function() {
         __predator = noone;
     });
 }

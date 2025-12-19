@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Sugar",
-    "path":"folders/Enemies/Sugar.yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Sugar.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

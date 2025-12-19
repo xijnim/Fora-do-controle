@@ -6,7 +6,7 @@
   "name":"scr_enemy_cheese",
   "parent":{
     "name":"Cheese",
-    "path":"folders/Enemies/Cheese.yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Cheese.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

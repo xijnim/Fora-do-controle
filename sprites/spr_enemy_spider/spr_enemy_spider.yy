@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Spider",
-    "path":"folders/Enemies/Spider.yy",
+    "path":"folders/Enemies/Area 3 (Table)/Spider.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

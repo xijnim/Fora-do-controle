@@ -6,7 +6,7 @@
   "name":"scr_enemy_corona",
   "parent":{
     "name":"Corona",
-    "path":"folders/Enemies/Corona.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Corona.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

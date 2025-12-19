@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Nut (Mini Version)",
-    "path":"folders/Enemies/Nut (Mini Version).yy",
+    "path":"folders/Enemies/Area 2 (Gamepad)/Nut (Mini Version).yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

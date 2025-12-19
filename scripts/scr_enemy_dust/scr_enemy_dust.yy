@@ -6,7 +6,7 @@
   "name":"scr_enemy_dust",
   "parent":{
     "name":"Dust",
-    "path":"folders/Enemies/Dust.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Dust.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"pth_car",
   "parent":{
     "name":"Car",
-    "path":"folders/Enemies/Car.yy",
+    "path":"folders/Enemies/Area 5 (City)/Car.yy",
   },
   "points":[
     {"speed":100.0,"x":-32.0,"y":160.0,},

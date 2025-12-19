@@ -6,7 +6,7 @@
   "name":"scr_enemy_nut",
   "parent":{
     "name":"Nut",
-    "path":"folders/Enemies/Nut.yy",
+    "path":"folders/Enemies/Area 1 (Panel)/Nut.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

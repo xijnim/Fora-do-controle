@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Cheetos",
-    "path":"folders/Enemies/Cheetos.yy",
+    "path":"folders/Enemies/Area 3 (Table)/Cheetos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

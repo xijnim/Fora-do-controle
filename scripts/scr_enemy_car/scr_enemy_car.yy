@@ -6,7 +6,7 @@
   "name":"scr_enemy_car",
   "parent":{
     "name":"Car",
-    "path":"folders/Enemies/Car.yy",
+    "path":"folders/Enemies/Area 5 (City)/Car.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
