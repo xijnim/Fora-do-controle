@@ -2,8 +2,10 @@ strategy.update();
 vfx_manager.update();
 hitbox.update();
 
-x = clamp(x, 0, room_width);
-y = clamp(y, 0, room_height);
+if type != EnemyIdx.Mini_Ant  {
+    x = clamp(x, 0, room_width);
+    y = clamp(y, 0, room_height);
+}
 
 var is_dead = hitbox.is_dead();
 

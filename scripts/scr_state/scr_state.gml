@@ -25,7 +25,7 @@ function __State() constructor {
         return xp / __table[0];
     }
 
-    xp = 4880;
+    xp = 880;
     berserk = false;
     berserk_progress = 0;
     

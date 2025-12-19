@@ -34,6 +34,7 @@ if doritos.y > room_height/2 {
 
 mp_grid_path(mp_grid, path, x, y, target_x, target_y, true);
 path_start(path, 5, path_action_stop, true);
+path_set_precision(path, 4);
 
 if place_meeting(x, y, obj_doritos) {
     game_restart();
