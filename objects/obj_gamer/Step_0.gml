@@ -20,15 +20,16 @@ mp_grid_add_rectangle(mp_grid, x1, y1, x2, y2);
 
 var target_x = -1;
 var target_y = -1;
+var idk_man = 16;
 if doritos.x > room_width/2 {
-    target_x = sprite_width/2;
+    target_x = sprite_width/2 + idk_man*2;
 } else {
-    target_x = room_width - sprite_width/2;
+    target_x = room_width - sprite_width/2 - idk_man*2;
 }
 if doritos.y > room_height/2 {
-    target_y = sprite_height;
+    target_y = sprite_height + idk_man;
 } else {
-    target_y = room_height-1;
+    target_y = room_height-1 - idk_man;
 }
 
 mp_grid_path(mp_grid, path, x, y, target_x, target_y, true);
@@ -37,6 +38,8 @@ path_start(path, 5, path_action_stop, true);
 if place_meeting(x, y, obj_doritos) {
     game_restart();
 }
+
+sprite_index = xprevious != x || yprevious != y ? spr_enemy_gamer : spr_gamer_idle;
 
 depth = -y;
 x = clamp(x, sprite_width/2, room_width-sprite_width/2);

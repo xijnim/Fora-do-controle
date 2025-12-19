@@ -15,3 +15,5 @@ add_inst = function(inst, margin) {
     mp_grid_add_rectangle(mp_grid, x1, y1, x2, y2);
 }
 
+mask_index = sprite_index;
+
