@@ -6,6 +6,7 @@ function Enemy(config) constructor {
     is_aggressive = config[$ "is_aggressive"] ?? false;
     repel = config[$ "repel"] ?? true;
     victims = config[$ "victims"] ?? [];
+    clamp_in_room = config[$ "clamp_in_room"] ?? true;
 }
 
 enum EnemyIdx {
@@ -23,6 +24,8 @@ enum EnemyIdx {
     Car,
     Spider,
     Gamer,
+    Tank,
+    Mini_Human,
 
     ENUM_LENGTH,
 }
@@ -43,6 +46,8 @@ global.enemies[EnemyIdx.Mini_Ant] = __get_enemy_mini_ant();
 global.enemies[EnemyIdx.Car] = __get_enemy_car();
 global.enemies[EnemyIdx.Spider] = __get_enemy_spider();
 global.enemies[EnemyIdx.Gamer] = __get_enemy_gamer();
+global.enemies[EnemyIdx.Tank] = __get_enemy_tank();
+global.enemies[EnemyIdx.Mini_Human] = __get_enemy_mini_human();
 
 function notify_kill(add_reward, xp_reward) {
     if add_reward {

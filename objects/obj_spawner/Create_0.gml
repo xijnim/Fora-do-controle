@@ -31,7 +31,6 @@ timer = new Timer(1, function() {
     instance_create_depth(spawn_x, spawn_y, 0, obj_enemy, {type});
 });
 
-
 __get_spawn_pos = function() {
     var spawn_x = -1;
     var spawn_y = -1;
@@ -50,3 +49,6 @@ __get_spawn_pos = function() {
 
     return [spawn_x, spawn_y];
 }
+
+cars_killed = 0;
+

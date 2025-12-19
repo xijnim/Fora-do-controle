@@ -2,7 +2,7 @@ strategy.update();
 vfx_manager.update();
 hitbox.update();
 
-if type != EnemyIdx.Mini_Ant  {
+if data.clamp_in_room {
     x = clamp(x, 0, room_width);
     y = clamp(y, 0, room_height);
 }
@@ -32,7 +32,15 @@ if instance_exists(enemy) && data.repel {
     vsp += lengthdir_y(3, dir);
 }
 
-var solid_inst = instance_place(x, y, obj_enemy);
+var car_death = false;
+if !is_undefined(strategy[$ "should_die"]) {
+    if strategy.should_die() {
+        is_dead = true;
+        car_death = true;
+    }
+}
+
+var solid_inst = instance_place(x, y, obj_solid);
 if instance_exists(solid_inst) {
     var dir = point_direction(x, y, solid_inst.x, solid_inst.y)+180;
     hsp += lengthdir_x(3, dir);
@@ -40,6 +48,11 @@ if instance_exists(solid_inst) {
 }
 
 if is_dead {
-    notify_kill(!meeting_predator, data.xp_reward);
+    if !car_death {
+        notify_kill(!meeting_predator && !car_death, data.xp_reward);
+    }
+    if type == EnemyIdx.Car {
+        obj_spawner.cars_killed += 1;
+    }
     instance_destroy();
 }

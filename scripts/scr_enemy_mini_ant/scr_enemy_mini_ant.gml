@@ -7,7 +7,8 @@ function __get_enemy_mini_ant() {
         can_spawn: spawn_cap_cond(EnemyIdx.Ant, 3, 12),
         xp_reward: 50,
         is_aggressive: false,
-		repel: true
+		repel: true,
+        clamp_in_room: false,
     });
 }
 
