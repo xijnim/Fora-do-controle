@@ -31,7 +31,7 @@
   "origin":7,
   "parent":{
     "name":"Gamer",
-    "path":"folders/Enemies/Gamer.yy",
+    "path":"folders/Areas/House/Gamer.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

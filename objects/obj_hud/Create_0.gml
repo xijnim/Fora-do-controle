@@ -11,7 +11,12 @@ berserk_bar = new HudBar({
     inner_sprite: spr_berserk_bar_inner,
     text_sprite: spr_berserk_text,
     pos_y: start_y + sprite_get_height(spr_level_bar) + sprite_get_height(spr_berserk_text) - 9,
-    get: function(){return State.berserk_progress/10},
+    get: function(){
+        if room == rm_house {
+            return State.berserk_progress/4;
+        }
+        return State.berserk_progress/10;
+    },
 });
 
 var bar_h = sprite_get_height(spr_level_bar);

@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sofa",
-  "eventList":[],
+  "%Name":"par_furniture",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_sofa",
+  "name":"par_furniture",
   "overriddenProperties":[],
   "parent":{
     "name":"House",
     "path":"folders/Areas/House.yy",
   },
-  "parentObjectId":{
-    "name":"par_furniture",
-    "path":"objects/par_furniture/par_furniture.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_sofa",
-    "path":"sprites/spr_sofa/spr_sofa.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

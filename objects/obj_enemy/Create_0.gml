@@ -13,6 +13,8 @@ vfx_manager.add_angle(50);
 hsp = 0;
 vsp = 0;
 
+mask_index = sprite_index;
+
 kill = function() {
     instance_destroy();
 }

@@ -22,6 +22,7 @@ enum EnemyIdx {
 	Chocolate,
     Car,
     Spider,
+    Gamer,
 
     ENUM_LENGTH,
 }
@@ -41,6 +42,21 @@ global.enemies[EnemyIdx.Ant] = __get_enemy_ant();
 global.enemies[EnemyIdx.Mini_Ant] = __get_enemy_mini_ant();
 global.enemies[EnemyIdx.Car] = __get_enemy_car();
 global.enemies[EnemyIdx.Spider] = __get_enemy_spider();
+global.enemies[EnemyIdx.Gamer] = __get_enemy_gamer();
+
+function notify_kill(add_reward, xp_reward) {
+    if add_reward {
+        State.xp += xp_reward;
+        if !State.berserk {
+            State.berserk_progress += 1;
+        }
+    }
+    with obj_doritos {
+        vfx_manager.add_angle(40);
+        vfx_manager.add_scale_force(.5, -.5);
+    }
+	audio_play_sound(sfx_player_eat, 2, 0, .7, 0, random_range(.9, 1.1));
+}
 
 array_foreach(global.enemies, function(enemy) {
     assert_exists(enemy);

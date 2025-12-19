@@ -30,6 +30,7 @@ var progress_table = [
     [spr_doritos2, rm_gamepad_bigger],
     [spr_doritos2, rm_table],
     [spr_doritos2, rm_house],
+    [spr_doritos2, rm_city],
 ];
 
 if room == rm_house {

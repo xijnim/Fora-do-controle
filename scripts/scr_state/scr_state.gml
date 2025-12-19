@@ -6,10 +6,17 @@ function __State() constructor {
         
         var price = __table[0];
         if xp >= price {
+            if price == 4 {
+                State.berserk_progress = 0;
+            }
             xp -= price;
             __level += 1;
             global.flash = 1;
             array_delete(__table, 0, 1);
+            if array_length(__table) > 0 && __table[0] == 4 {
+                xp = 0;
+                State.berserk_progress = 0;
+            }
         }
     }
 
@@ -25,7 +32,7 @@ function __State() constructor {
         return xp / __table[0];
     }
 
-    xp = 880;
+    xp = 4880;
     berserk = false;
     berserk_progress = 0;
     
@@ -34,6 +41,9 @@ function __State() constructor {
         80,
         800,
 		4000,
+        // 4,
+        0,
+        10000,
     ];
 }
 

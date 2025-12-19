@@ -4,8 +4,7 @@ function __get_enemy_car() {
         make_strategy: function(inst) {
             return new EnemyCarStrategy(inst);
         },
-        // can_spawn: spawn_cap_cond(EnemyIdx.Car, 3, 4),
-        can_spawn: spawn_never_cond,
+        can_spawn: spawn_cap_cond(EnemyIdx.Car, 5, 4),
         is_aggressive: false,
         xp_reward: 25,
     });

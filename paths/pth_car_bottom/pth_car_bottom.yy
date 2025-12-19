@@ -1,9 +1,9 @@
 {
   "$GMPath":"",
-  "%Name":"pth_car",
+  "%Name":"pth_car_bottom",
   "closed":false,
   "kind":1,
-  "name":"pth_car",
+  "name":"pth_car_bottom",
   "parent":{
     "name":"Car",
     "path":"folders/Enemies/Car.yy",

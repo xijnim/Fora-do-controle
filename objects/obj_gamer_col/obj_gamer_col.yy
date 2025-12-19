@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sofa",
+  "%Name":"obj_gamer_col",
   "eventList":[],
   "managed":true,
-  "name":"obj_sofa",
+  "name":"obj_gamer_col",
   "overriddenProperties":[],
   "parent":{
     "name":"House",
     "path":"folders/Areas/House.yy",
   },
-  "parentObjectId":{
-    "name":"par_furniture",
-    "path":"objects/par_furniture/par_furniture.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sofa",
-    "path":"sprites/spr_sofa/spr_sofa.yy",
+    "name":"spr_berserk_text",
+    "path":"sprites/spr_berserk_text/spr_berserk_text.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

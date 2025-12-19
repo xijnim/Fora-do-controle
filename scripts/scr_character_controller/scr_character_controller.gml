@@ -80,8 +80,14 @@ function CharacterController(inst) constructor {
 
         var hsp = __hsp + __knockback_x;
         var vsp = __vsp + __knockback_y;
+        var gamer_exists = false;
+        with obj_enemy {
+            if type == EnemyIdx.Gamer {
+                gamer_exists = true;
+            }
+        }
         with __inst {
-            move_and_collide(hsp, vsp, [obj_sofa, obj_tv, obj_gamer_table]);
+            move_and_collide(hsp, vsp, gamer_exists ? par_furniture : []);
         }
     }
 
