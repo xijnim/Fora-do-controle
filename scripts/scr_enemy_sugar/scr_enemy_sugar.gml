@@ -43,6 +43,9 @@ function EnemySugarStrategy(inst) constructor {
         if instance_exists(__ant) {
             var dir = point_direction(__inst.x, __inst.y, __ant.x, __ant.y)+180;
             var spd = 1.25;
+			if __inst.type = EnemyIdx.Mini_Sugar {
+				spd = .75;	
+			}
             return [lengthdir_x(spd, dir), lengthdir_y(spd, dir)];
         }
 
