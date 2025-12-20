@@ -4,7 +4,7 @@ function __get_enemy_nut() {
         make_strategy: function(inst) {
             return new EnemyAggressiveStrategy(inst);
         },
-        can_spawn: spawn_cap_cond(EnemyIdx.Nut, 1, 4),
+        can_spawn: spawn_cap_cond(EnemyIdx.Nut, 1, 1),
         is_aggressive: true,
         xp_reward: 25,
     });

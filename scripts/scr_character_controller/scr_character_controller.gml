@@ -83,6 +83,17 @@ function CharacterController(inst) constructor {
 
         var hsp = __hsp + __knockback_x;
         var vsp = __vsp + __knockback_y;
+
+        if instance_exists(obj_sun) {
+            var attract = 2;
+            var dir = point_direction(__inst.x, __inst.y, obj_sun.x, obj_sun.y);
+            var attract_x = lengthdir_x(attract, dir);
+            var attract_y = lengthdir_y(attract, dir);
+            
+            hsp += attract_x;
+            vsp += attract_y;
+        }
+
         var gamer_exists = false;
         with obj_enemy {
             if type == EnemyIdx.Gamer {

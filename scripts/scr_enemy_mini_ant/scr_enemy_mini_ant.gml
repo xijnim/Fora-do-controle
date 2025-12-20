@@ -13,7 +13,7 @@ function __get_enemy_mini_ant() {
 }
 
 
-function EnemyMiniAntStrategy(inst) constructor {
+function EnemyMiniAntStrategy(inst, extra_conf={}) constructor {
     update = function() {
         __forget_timer.tick();
 
@@ -42,9 +42,15 @@ function EnemyMiniAntStrategy(inst) constructor {
             __vsp = lerp(__vsp, spd[1], .6);
         } else {
             var dir = point_direction(__inst.x, __inst.y, __predator.x, __predator.y)+180;
-            __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
+            if __change_angle {
+                __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
+            }
             __hsp = lerp(__hsp, lengthdir_x(1.5, dir), .3);
             __vsp = lerp(__vsp, lengthdir_y(1.5, dir), .3);
+        }
+
+        if !__change_angle {
+            __inst.image_angle = 0;
         }
 
         __inst.x += __hsp;
@@ -56,6 +62,7 @@ function EnemyMiniAntStrategy(inst) constructor {
     __predator = noone;
     __hsp = 0;
     __vsp = 0;
+    __change_angle = extra_conf[$ "change_angle"] ?? true;
     __forget_timer = new Timer(3, function() {
         __predator = noone;
     });
