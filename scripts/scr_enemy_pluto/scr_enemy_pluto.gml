@@ -8,10 +8,10 @@ function __get_enemy_pluto() {
                     return obj_sun;
                 },
                 dist: 980,
-                angle_spd: .00005,
+                angle_spd: .75,
             });
         },
         can_spawn: spawn_never_cond,
-        xp_reward: 5,
+        xp_reward: 650,
     });
 }

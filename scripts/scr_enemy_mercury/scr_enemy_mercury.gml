@@ -7,11 +7,11 @@ function __get_enemy_mercury() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 360,
-                angle_spd: 3,
+                dist: 340,
+                angle_spd: 2,
             });
         },
         can_spawn: spawn_never_cond,
-        xp_reward: 5,
+        xp_reward: 600,
     });
 }

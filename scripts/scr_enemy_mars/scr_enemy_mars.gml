@@ -7,11 +7,11 @@ function __get_enemy_mars() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 740,
+                dist: 780,
                 angle_spd: 1,
             });
         },
         can_spawn: spawn_never_cond,
-        xp_reward: 5,
+        xp_reward: 500,
     });
 }

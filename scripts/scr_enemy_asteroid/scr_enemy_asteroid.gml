@@ -4,8 +4,8 @@ function __get_enemy_asteroid() {
         make_strategy: function(inst) {
             return new EnemyAsteroidStrategy(inst);
         },
-        can_spawn: spawn_cap_cond(EnemyIdx.Asteroid, 6, 12),
-        xp_reward: 5,
+        can_spawn: spawn_cap_cond(EnemyIdx.Asteroid, 6, 32),
+        xp_reward: 300,
     });
 }
 
@@ -17,7 +17,7 @@ function EnemyAsteroidStrategy(inst) constructor {
         __inst.x = target_x;
         __inst.y = target_y;
         __angle += .05;
-        __dist -= .5;
+        __dist -= 1;
     }
 
     __inst = inst;
@@ -25,4 +25,5 @@ function EnemyAsteroidStrategy(inst) constructor {
     __angle = point_direction(obj_sun.x, obj_sun.y, inst.x, inst.y);
     inst.image_speed = 0;
     inst.image_index = irandom(inst.image_number-1);
+	inst.image_angle += 1;
 }

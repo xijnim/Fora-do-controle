@@ -12,11 +12,11 @@ function __get_enemy_moon() {
                     }
                     return noone;
                 },
-                dist: 128,
-                angle_spd: 3,
+                dist: 100,
+                angle_spd: .75,
             });
         },
         can_spawn: spawn_never_cond,
-        xp_reward: 5,
+        xp_reward: 50,
     });
 }

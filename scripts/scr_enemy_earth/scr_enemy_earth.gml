@@ -7,12 +7,12 @@ function __get_enemy_earth() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 560,
-                angle_spd: 2,
+                dist: 600,
+                angle_spd: .75,
             });
         },
         can_spawn: spawn_never_cond,
-        xp_reward: 5,
+        xp_reward: 500,
     });
 }
 
