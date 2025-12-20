@@ -7,8 +7,8 @@ function __get_enemy_earth() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 320,
-                angle_spd: 3,
+                dist: 560,
+                angle_spd: 2,
             });
         },
         can_spawn: spawn_never_cond,

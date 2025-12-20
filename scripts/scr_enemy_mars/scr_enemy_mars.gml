@@ -7,8 +7,8 @@ function __get_enemy_mars() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 480,
-                angle_spd: 3,
+                dist: 740,
+                angle_spd: 1,
             });
         },
         can_spawn: spawn_never_cond,

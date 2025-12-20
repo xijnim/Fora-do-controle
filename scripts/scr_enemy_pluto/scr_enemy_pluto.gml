@@ -7,8 +7,8 @@ function __get_enemy_pluto() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 720,
-                angle_spd: 3,
+                dist: 980,
+                angle_spd: .00005,
             });
         },
         can_spawn: spawn_never_cond,

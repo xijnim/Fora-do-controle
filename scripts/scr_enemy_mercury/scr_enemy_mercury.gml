@@ -7,7 +7,7 @@ function __get_enemy_mercury() {
                 get_owner: function() {
                     return obj_sun;
                 },
-                dist: 240,
+                dist: 360,
                 angle_spd: 3,
             });
         },
