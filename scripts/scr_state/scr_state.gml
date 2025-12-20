@@ -34,6 +34,7 @@ function __State() constructor {
 
     xp = 4880;
     berserk = false;
+	berserk_needed = 8;
     berserk_progress = 0;
     
     __level = 1;
@@ -43,7 +44,7 @@ function __State() constructor {
 		4000,
         // 4,
         4,
-        10000,
+        8000,
     ];
 }
 

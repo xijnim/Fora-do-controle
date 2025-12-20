@@ -49,12 +49,18 @@ function EnemyGamerStrategy(inst) constructor {
 
         mp_grid_path(__mp_grid, __path, __inst.x, __inst.y, target_x, target_y, true);
         with __inst {
-            path_start(other.__path, 4, path_action_stop, true);
+            path_start(other.__path, other.__spd, path_action_stop, true);
         }
         path_set_precision(__path, 4);
 
         var has_moved = __inst.xprevious != __inst.x || __inst.yprevious != __inst.y;
         __inst.sprite_index = has_moved ? spr_enemy_gamer : spr_gamer_idle;
+		
+		if !has_moved {
+			__spd = lerp(__spd, .01, 0.1);	
+		} else {
+			__spd = lerp(__spd, 4, 0.1);	
+		}
 
         var spr_w = __inst.sprite_width;
         var spr_h = __inst.sprite_height;
@@ -65,6 +71,7 @@ function EnemyGamerStrategy(inst) constructor {
 
     __hsp = 0;
     __vsp = 0;
+	__spd = 4;
 
     __mp_grid = mp_grid_create(0, 0, room_width, room_height, 1, 1);
     __path = path_add();

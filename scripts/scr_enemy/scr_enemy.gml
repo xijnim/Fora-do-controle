@@ -23,6 +23,7 @@ enum EnemyIdx {
 	Chocolate,
     Car,
     Spider,
+	Mini_Spider,
     Gamer,
     Tank,
     Mini_Human,
@@ -48,6 +49,7 @@ global.enemies[EnemyIdx.Spider] = __get_enemy_spider();
 global.enemies[EnemyIdx.Gamer] = __get_enemy_gamer();
 global.enemies[EnemyIdx.Tank] = __get_enemy_tank();
 global.enemies[EnemyIdx.Mini_Human] = __get_enemy_mini_human();
+global.enemies[EnemyIdx.Mini_Spider] = __get_enemy_mini_spider();
 
 function notify_kill(add_reward, xp_reward) {
     if add_reward {

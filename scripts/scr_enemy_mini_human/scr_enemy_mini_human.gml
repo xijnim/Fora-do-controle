@@ -5,7 +5,7 @@ function __get_enemy_mini_human() {
             return new EnemyMiniAntStrategy(inst);
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Mini_Human, 5, 32),
-        xp_reward: 10,
+        xp_reward: 50,
         is_aggressive: false,
 		repel: true,
     });

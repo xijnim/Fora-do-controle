@@ -6,7 +6,7 @@ if invincible {
 character_controller.update();
 vfx_manager.update();
 
-if State.berserk_progress == 8 {
+if State.berserk_progress ==  State.berserk_needed {
     if !had_berserk {
         State.berserk = true;
         had_berserk = true;

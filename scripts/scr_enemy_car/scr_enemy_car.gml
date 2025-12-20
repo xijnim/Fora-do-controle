@@ -6,7 +6,7 @@ function __get_enemy_car() {
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Car, 5, 8),
         is_aggressive: false,
-        xp_reward: 25,
+        xp_reward: 250,
         clamp_in_room: false,
         victims: [EnemyIdx.Mini_Human],
     });

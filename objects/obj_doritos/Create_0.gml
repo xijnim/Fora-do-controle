@@ -24,7 +24,7 @@ take_damage = function(damage, knockback=0, dir=0) {
 }
 
 path_timer = new Timer(.0001, function() {
-    var path = instance_create_depth(x, y, 0, obj_doritos_path);
+    var path = instance_create_depth(x, y, depth+1, obj_doritos_path);
     path.sprite_index = sprite_index;
 });
 
