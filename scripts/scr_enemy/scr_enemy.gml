@@ -20,6 +20,7 @@ enum EnemyIdx {
 	Sugar,
     Ant,
 	Mini_Ant,
+    Mini_Sugar,
 	Chocolate,
     Car,
     Spider,
@@ -50,6 +51,7 @@ global.enemies[EnemyIdx.Sugar] = __get_enemy_sugar();
 global.enemies[EnemyIdx.Chocolate] = __get_enemy_chocolate();
 global.enemies[EnemyIdx.Ant] = __get_enemy_ant();
 global.enemies[EnemyIdx.Mini_Ant] = __get_enemy_mini_ant();
+global.enemies[EnemyIdx.Mini_Sugar] = __get_enemy_mini_sugar();
 global.enemies[EnemyIdx.Car] = __get_enemy_car();
 global.enemies[EnemyIdx.Spider] = __get_enemy_spider();
 global.enemies[EnemyIdx.Gamer] = __get_enemy_gamer();

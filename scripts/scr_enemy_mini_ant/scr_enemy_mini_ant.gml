@@ -9,6 +9,7 @@ function __get_enemy_mini_ant() {
         is_aggressive: false,
 		repel: true,
         clamp_in_room: false,
+        victims: [EnemyIdx.Mini_Sugar],
     });
 }
 
