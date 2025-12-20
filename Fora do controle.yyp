@@ -164,6 +164,7 @@
     {"id":{"name":"spr_level_bar_inner","path":"sprites/spr_level_bar_inner/spr_level_bar_inner.yy",},},
     {"id":{"name":"spr_level_bar","path":"sprites/spr_level_bar/spr_level_bar.yy",},},
     {"id":{"name":"spr_level_text","path":"sprites/spr_level_text/spr_level_text.yy",},},
+    {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},},
     {"id":{"name":"spr_sofa","path":"sprites/spr_sofa/spr_sofa.yy",},},
     {"id":{"name":"spr_sun","path":"sprites/spr_sun/spr_sun.yy",},},
     {"id":{"name":"spr_tank_bullet","path":"sprites/spr_tank_bullet/spr_tank_bullet.yy",},},

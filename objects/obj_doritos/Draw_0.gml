@@ -12,4 +12,5 @@ draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, angle, c_white,
 shader_reset();
 
 draw_text(x, y, $"XP: {State.xp}\nLevel: {State.get_level()}");
-draw_shadow(x, y);
+draw_shadow(x, bbox_bottom-4, 12, 6);
+
