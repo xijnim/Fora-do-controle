@@ -25,15 +25,13 @@ function EnemyTankStrategy(inst) constructor {
         draw_sprite_ext(
             spr_enemy_tank_gun, 0,
             __inst.x, __inst.y,
-            __xscale, __yscale,
+            1, 1,
             __dir, c_white, 1
         );
     }
 
     __inst = inst;
     __dir = 0;
-	__yscale = lerp(__inst.__yscale, 1, 0.1);
-	__xscale = lerp(__inst.__xscale, 1, 0.1);
     __shoot_timer = new Timer(.75, function() {
         var gun_w = sprite_get_width(spr_enemy_tank_gun);
         var bullet_x = __inst.x + lengthdir_x(gun_w/2, __dir);
@@ -41,7 +39,5 @@ function EnemyTankStrategy(inst) constructor {
         
         var bullet = instance_create_depth(bullet_x, bullet_y, 0, obj_tank_bullet, {dir: __dir});
 		bullet.image_angle = point_direction(__inst.x, __inst.y, obj_doritos.x, obj_doritos.y);
-		__inst.__yscale = 0.75;
-		__inst.__xscale = 1.25;
     });
 }

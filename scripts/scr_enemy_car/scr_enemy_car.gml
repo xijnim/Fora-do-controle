@@ -21,20 +21,15 @@ function EnemyCarStrategy(inst) constructor {
         }
 
         if __panic {
-            with __inst {
-                path_end();
-            }
-            var doritos = obj_doritos;
-            var dir = point_direction(doritos.x, doritos.y, __inst.x, __inst.y);
-            var spd = 3;
-            __hsp = lerp(__hsp, lengthdir_x(spd, dir), .05);
-            __vsp = lerp(__vsp, lengthdir_y(spd, dir), .05);
-
-            __inst.x += __hsp;
-            __inst.y += __vsp;
+            __inst.path_speed = 5;
+			
         }
-        var dir = point_direction(__inst.xprevious, __inst.yprevious, __inst.x, __inst.y);
-        __inst.image_angle = dir;
+		
+		var dir = __inst.direction
+		if __is_bottom {
+			dir += 180;	
+		}
+		__inst.image_angle = lerp_angle(__inst.image_angle, dir, 0.2);
 
         var meeting = false;
         with obj_enemy {
@@ -70,8 +65,14 @@ function EnemyCarStrategy(inst) constructor {
         return __die;
     }
 
+	__is_bottom = false;
     with inst {
-        path_start(choose(pth_car, pth_car_bottom), 1.5, path_action_stop, true);
+		var path_choose = choose(pth_car, pth_car_bottom)
+        path_start(path_choose, 1.5, path_action_stop, true);
+		
+		if path_choose = pth_car_bottom {
+			other.__is_bottom = true;
+		}
     }
     inst.image_speed = 0;
     inst.sprite_index = spr_enemy_car;
