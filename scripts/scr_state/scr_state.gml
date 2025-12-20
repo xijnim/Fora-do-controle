@@ -1,4 +1,4 @@
-function __State() constructor {
+ function __State() constructor {
     update = function() {
         if array_length(__table) == 0 {
             return;
@@ -32,11 +32,7 @@ function __State() constructor {
         return xp / __table[0];
     }
 
-<<<<<<< HEAD
-    xp = 0//4880 + 8000;
-=======
-    xp = 4880;
->>>>>>> d1abf30ae1d327be454ee9f7a29668957bad88f7
+    xp = 4880 + 8000 + 4;
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;
@@ -48,10 +44,11 @@ function __State() constructor {
 		4000,
         SKIP_HOUSE ? 0 : 4,
         8000,
+		10000,
     ];
 }
 
-#macro SKIP_HOUSE false
+#macro SKIP_HOUSE true
 
 globalvar State;
 State = new __State();

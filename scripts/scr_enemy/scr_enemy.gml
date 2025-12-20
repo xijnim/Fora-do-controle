@@ -30,6 +30,9 @@ enum EnemyIdx {
     Earth,
     Moon,
     Asteroid,
+	Mars,
+	Mercury,
+	Pluto,
 
     ENUM_LENGTH,
 }
@@ -55,7 +58,9 @@ global.enemies[EnemyIdx.Mini_Human] = __get_enemy_mini_human();
 global.enemies[EnemyIdx.Mini_Spider] = __get_enemy_mini_spider();
 global.enemies[EnemyIdx.Earth] = __get_enemy_earth();
 global.enemies[EnemyIdx.Moon] = __get_enemy_moon();
-global.enemies[EnemyIdx.Asteroid] = __get_enemy_asteroid();
+global.enemies[EnemyIdx.Mars] = __get_enemy_mars();
+global.enemies[EnemyIdx.Mercury] = __get_enemy_mercury();
+global.enemies[EnemyIdx.Pluto] = __get_enemy_pluto();
 
 function notify_kill(add_reward, xp_reward) {
     if add_reward {

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enemy_pluto",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enemy_pluto",
+  "parent":{
+    "name":"Space",
+    "path":"folders/Areas/Space.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
