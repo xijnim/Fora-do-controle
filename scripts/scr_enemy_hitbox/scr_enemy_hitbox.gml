@@ -7,6 +7,10 @@ function EnemyHitbox(inst, is_aggressive, damage=true) constructor {
             if !State.berserk && __damage {
                 doritos.take_damage(__inst.data.xp_reward);
                 obj_camera.screenshake(5);
+
+                if !is_undefined(__inst.strategy[$ "attacked_doritos"]) {
+                    __inst.strategy.attacked_doritos();
+                }
             }
             
             return false;

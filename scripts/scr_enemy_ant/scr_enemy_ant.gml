@@ -30,9 +30,14 @@ function EnemyAntStrategy(inst, extra_conf={}) constructor {
 
         var doritos = instance_nearest(__inst.x, __inst.y, obj_doritos);
         if instance_exists(doritos) 
-            && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 64 {
+            && point_distance(__inst.x, __inst.y, doritos.x, doritos.y) < 64
+            && __can_attack_doritos {
             __target_inst = doritos;
-            __forget_timer.reset();
+            __forget_timer1.reset();
+        }
+
+        if !__can_attack_doritos {
+            __forget_timer1.tick();
         }
 
         if !instance_exists(__target_inst) {
@@ -56,12 +61,20 @@ function EnemyAntStrategy(inst, extra_conf={}) constructor {
         __inst.y += __vsp;
     }
 
+    attacked_doritos = function() {
+        __can_attack_doritos = false;
+    }
+
     __random_walking_movement = new RandomWalkingMovement({inst});
     __inst = inst;
     __target_inst = noone;
     __hsp = 0;
     __vsp = 0;
     __change_angle = extra_conf[$ "change_angle"] ?? true;
+    __can_attack_doritos = true;
+    __forget_timer1 = new Timer(3, function() {
+        __can_attack_doritos = true;
+    });
     __forget_timer = new Timer(4, function() {
         __target_inst = noone;
     });
