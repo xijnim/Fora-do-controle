@@ -20,6 +20,7 @@ take_damage = function(damage, knockback=0, dir=0) {
         State.xp -= damage;
         invincible = true;
     }
+    State.berserk_progress = 0;
     character_controller.add_knockback(knockback, dir);
 }
 

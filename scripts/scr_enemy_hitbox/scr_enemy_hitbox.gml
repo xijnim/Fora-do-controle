@@ -5,7 +5,7 @@ function EnemyHitbox(inst, is_aggressive, damage=true) constructor {
     notify_hit = function(doritos) {
         if __is_aggressive {
             if !State.berserk && __damage {
-                doritos.take_damage(1);
+                doritos.take_damage(__inst.data.xp_reward);
                 obj_camera.screenshake(5);
             }
             
