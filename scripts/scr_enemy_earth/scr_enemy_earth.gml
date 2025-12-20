@@ -30,7 +30,7 @@ function EnemyOrbitStrategy(config) constructor {
 
         __inst.x = target_x;
         __inst.y = target_y;// + sin(current_time*.007 + __anim_offset)*16;
-        __angle += 1;
+        __angle += __angle_spd;
         // var dir = point_direction(__inst.x, __inst.y, target_x, target_y);
         //
         // var target_hsp = lengthdir_x(1, dir);

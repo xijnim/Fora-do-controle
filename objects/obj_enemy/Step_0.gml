@@ -51,7 +51,7 @@ if instance_exists(solid_inst) {
 }
 
 if is_dead {
-    if !car_death {
+    if !car_death && !meeting_predator {
         notify_kill(!meeting_predator && !car_death, data.xp_reward);
 
         if type == EnemyIdx.Car {
