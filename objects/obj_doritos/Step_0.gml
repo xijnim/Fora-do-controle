@@ -29,7 +29,7 @@ var progress_table = [
     [spr_doritos, rm_gamepad],
     [spr_doritos_2, rm_gamepad_bigger],
     [spr_doritos_3, rm_table],
-    [spr_doritos_4, rm_house],
+    [spr_doritos_4_house, rm_house],
     [spr_doritos_4, rm_city],
 ];
 

@@ -116,6 +116,7 @@
     {"id":{"name":"spr_berserk_text","path":"sprites/spr_berserk_text/spr_berserk_text.yy",},},
     {"id":{"name":"spr_doritos_2","path":"sprites/spr_doritos_2/spr_doritos_2.yy",},},
     {"id":{"name":"spr_doritos_3","path":"sprites/spr_doritos_3/spr_doritos_3.yy",},},
+    {"id":{"name":"spr_doritos_4_house","path":"sprites/spr_doritos_4_house/spr_doritos_4_house.yy",},},
     {"id":{"name":"spr_doritos_4","path":"sprites/spr_doritos_4/spr_doritos_4.yy",},},
     {"id":{"name":"spr_doritos","path":"sprites/spr_doritos/spr_doritos.yy",},},
     {"id":{"name":"spr_enemy_ant","path":"sprites/spr_enemy_ant/spr_enemy_ant.yy",},},
