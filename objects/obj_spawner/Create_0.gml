@@ -20,7 +20,7 @@ timer = new Timer(1, function() {
     }
 
     var type = array_rand(possibilities);
-    if type == EnemyIdx.Mini_Ant {
+    if array_contains([EnemyIdx.Mini_Ant, EnemyIdx.Mini_Human], type) {
         var dir = irandom(359);
         var margin = 64;
         spawn_x = room_width/2 + lengthdir_x(room_width/2 + 128, dir);

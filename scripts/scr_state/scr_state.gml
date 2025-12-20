@@ -32,7 +32,11 @@ function __State() constructor {
         return xp / __table[0];
     }
 
+<<<<<<< HEAD
     xp = 0//4880 + 8000;
+=======
+    xp = 4880;
+>>>>>>> d1abf30ae1d327be454ee9f7a29668957bad88f7
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;

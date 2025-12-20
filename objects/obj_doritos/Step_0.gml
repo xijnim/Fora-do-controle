@@ -38,6 +38,11 @@ if room == rm_house {
     depth = -bbox_bottom;
 }
 
+if place_meeting(x, y, obj_sun) {
+    var dir = point_direction(obj_sun.x, obj_sun.y, x, y);
+    take_damage(State.xp/2, 32, dir);
+}
+
 var progress = progress_table[State.get_level()-1];
 sprite_index = progress[0];
 if room != progress[1] {

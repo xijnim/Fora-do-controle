@@ -12,7 +12,7 @@ function __get_enemy_ant() {
     });
 }
 
-function EnemyAntStrategy(inst) constructor {
+function EnemyAntStrategy(inst, extra_conf={}) constructor {
     update = function() {
         __forget_timer.tick();
 
@@ -44,7 +44,10 @@ function EnemyAntStrategy(inst) constructor {
             if __target_inst.object_index == obj_doritos && !__inst.data.is_aggressive {
                 dir += 180;
             }
-            __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
+
+            if __change_angle {
+                __inst.image_angle = lerp_angle(__inst.image_angle, dir+90, .2);
+            }
             __hsp = lerp(__hsp, lengthdir_x(1.7, dir), .3);
             __vsp = lerp(__vsp, lengthdir_y(1.7, dir), .3);
         }
@@ -58,6 +61,7 @@ function EnemyAntStrategy(inst) constructor {
     __target_inst = noone;
     __hsp = 0;
     __vsp = 0;
+    __change_angle = extra_conf[$ "change_angle"] ?? true;
     __forget_timer = new Timer(4, function() {
         __target_inst = noone;
     });
