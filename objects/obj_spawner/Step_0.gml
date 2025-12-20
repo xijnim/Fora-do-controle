@@ -1,4 +1,4 @@
-if cars_killed >= 10 && get_enemy_amt_by_type(EnemyIdx.Tank) == 0 && room == rm_city {
+if cars_killed >= 6 && get_enemy_amt_by_type(EnemyIdx.Tank) == 0 && room == rm_city {
     instance_create_depth(room_width/2, room_height/2, 0, obj_enemy, {type: EnemyIdx.Tank});
 }
 
