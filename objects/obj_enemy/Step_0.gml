@@ -54,8 +54,9 @@ if is_dead {
         if type == EnemyIdx.Car {
             obj_spawner.cars_killed += 1;
         }
-    } else {
+    } 
+	if (car_death) || (meeting_predator && type == EnemyIdx.Mini_Human) {
+		instance_create_depth(x, y, -10, obj_enemy_dead, {sprite_index, image_speed: 0, image_index});
     }
-    instance_create_depth(x, y, -10, obj_enemy_dead, {sprite_index, image_speed: 0, image_index});
     instance_destroy();
 }

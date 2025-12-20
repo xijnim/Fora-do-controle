@@ -25,10 +25,7 @@ function EnemyCarStrategy(inst) constructor {
 			
         }
 		
-		var dir = __inst.direction
-		if __is_bottom {
-			dir += 180;	
-		}
+		var dir = __inst.direction + 180;
 		__inst.image_angle = lerp_angle(__inst.image_angle, dir, 0.2);
 
         var meeting = false;

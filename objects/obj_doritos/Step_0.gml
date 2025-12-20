@@ -27,10 +27,10 @@ y = clamp(y, 0, room_height);
 
 var progress_table = [
     [spr_doritos, rm_gamepad],
-    [spr_doritos2, rm_gamepad_bigger],
-    [spr_doritos2, rm_table],
-    [spr_doritos2, rm_house],
-    [spr_doritos2, rm_city],
+    [spr_doritos_2, rm_gamepad_bigger],
+    [spr_doritos_3, rm_table],
+    [spr_doritos_4, rm_house],
+    [spr_doritos_4, rm_city],
 ];
 
 if room == rm_house {
