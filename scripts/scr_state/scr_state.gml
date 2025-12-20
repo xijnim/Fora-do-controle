@@ -1,4 +1,4 @@
-function __State() constructor {
+ function __State() constructor {
     update = function() {
         if array_length(__table) == 0 {
             return;
@@ -32,7 +32,7 @@ function __State() constructor {
         return xp / __table[0];
     }
 
-    xp = 4880;
+    xp = 4880 + 8000 + 4;
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;
@@ -44,6 +44,7 @@ function __State() constructor {
 		4000,
         SKIP_HOUSE ? 0 : 4,
         8000,
+		10000,
     ];
 }
 

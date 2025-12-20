@@ -16,8 +16,8 @@ function EnemyAsteroidStrategy(inst) constructor {
 
         __inst.x = target_x;
         __inst.y = target_y;
-        __angle += 1;
-        __dist -= 1;
+        __angle += .05;
+        __dist -= .5;
     }
 
     __inst = inst;
