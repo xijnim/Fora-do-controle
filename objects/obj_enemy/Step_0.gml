@@ -50,9 +50,12 @@ if instance_exists(solid_inst) {
 if is_dead {
     if !car_death {
         notify_kill(!meeting_predator && !car_death, data.xp_reward);
+
+        if type == EnemyIdx.Car {
+            obj_spawner.cars_killed += 1;
+        }
+    } else {
     }
-    if type == EnemyIdx.Car {
-        obj_spawner.cars_killed += 1;
-    }
+    instance_create_depth(x, y, -10, obj_enemy_dead, {sprite_index, image_speed: 0, image_index});
     instance_destroy();
 }
