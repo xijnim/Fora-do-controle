@@ -29,7 +29,10 @@ x += hsp;
 y += vsp;
 
 var enemy = instance_place(x, y, obj_enemy);
-if instance_exists(enemy) && data.repel {
+if instance_exists(enemy)
+    && data.repel
+    && !array_contains(enemy.data.victims, type)
+    && !array_contains(data.victims, enemy.type) {
     var dir = point_direction(x, y, enemy.x, enemy.y)+180;
     hsp += lengthdir_x(3, dir);
     vsp += lengthdir_y(3, dir);
