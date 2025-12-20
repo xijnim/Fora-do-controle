@@ -21,7 +21,7 @@ function EnemyCarStrategy(inst) constructor {
         }
 
         if __panic {
-            __inst.path_speed = 5;
+            __inst.path_speed = lerp(__inst.path_speed, 5, 0.1);
 			
         }
 		

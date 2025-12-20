@@ -21,6 +21,7 @@ function EnemyTankStrategy(inst) constructor {
         __dir = lerp_angle(__dir, dir, .2);
         __yscale = lerp(__yscale, 1, 0.1);
         __xscale = lerp(__xscale, 1, 0.1);
+		__inst.image_angle = lerp_angle(__inst.image_angle, __dir, .025);
     }
 
     render = function() {
@@ -36,7 +37,7 @@ function EnemyTankStrategy(inst) constructor {
     __dir = 0;
     __xscale = 0;
     __yscale = 0;
-    __shoot_timer = new Timer(.75, function() {
+    __shoot_timer = new Timer(1.5, function() {
         var gun_w = sprite_get_width(spr_enemy_tank_gun);
         var bullet_x = __inst.x + lengthdir_x(gun_w/2, __dir);
         var bullet_y = __inst.y + lengthdir_y(gun_w/2, __dir);
