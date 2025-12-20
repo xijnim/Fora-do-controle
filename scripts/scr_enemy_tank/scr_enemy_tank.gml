@@ -27,7 +27,7 @@ function EnemyTankStrategy(inst) constructor {
         draw_sprite_ext(
             spr_enemy_tank_gun, 0,
             __inst.x, __inst.y,
-            __xscale, __yscale,
+            1, 1,
             __dir, c_white, 1
         );
     }
@@ -43,7 +43,5 @@ function EnemyTankStrategy(inst) constructor {
         
         var bullet = instance_create_depth(bullet_x, bullet_y, 0, obj_tank_bullet, {dir: __dir});
 		bullet.image_angle = point_direction(__inst.x, __inst.y, obj_doritos.x, obj_doritos.y);
-		__inst.__yscale = 0.75;
-		__inst.__xscale = 1.25;
     });
 }

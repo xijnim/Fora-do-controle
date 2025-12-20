@@ -42,7 +42,7 @@ function __State() constructor {
         800,
 		4000,
         // 4,
-        0,
+        4,
         10000,
     ];
 }

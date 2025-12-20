@@ -49,7 +49,7 @@ function EnemyGamerStrategy(inst) constructor {
 
         mp_grid_path(__mp_grid, __path, __inst.x, __inst.y, target_x, target_y, true);
         with __inst {
-            path_start(other.__path, 5, path_action_stop, true);
+            path_start(other.__path, 4, path_action_stop, true);
         }
         path_set_precision(__path, 4);
 
