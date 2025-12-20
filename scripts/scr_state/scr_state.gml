@@ -32,7 +32,7 @@
         return xp / __table[0];
     }
 
-    xp = 4880 + 8000 + 4;
+    xp = 0;
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;
