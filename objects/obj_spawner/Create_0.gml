@@ -45,7 +45,8 @@ __get_spawn_pos = function() {
             break;
         }
     } until
-        !collision_circle(spawn_x, spawn_y, 24, obj_doritos, true, true);
+        !collision_circle(spawn_x, spawn_y, 24, obj_doritos, true, true)
+        && !collision_circle(spawn_x, spawn_y, 128, obj_sun, true, true);
 
     return [spawn_x, spawn_y];
 }

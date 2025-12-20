@@ -27,6 +27,9 @@ enum EnemyIdx {
     Gamer,
     Tank,
     Mini_Human,
+    Earth,
+    Moon,
+    Asteroid,
 
     ENUM_LENGTH,
 }
@@ -50,6 +53,9 @@ global.enemies[EnemyIdx.Gamer] = __get_enemy_gamer();
 global.enemies[EnemyIdx.Tank] = __get_enemy_tank();
 global.enemies[EnemyIdx.Mini_Human] = __get_enemy_mini_human();
 global.enemies[EnemyIdx.Mini_Spider] = __get_enemy_mini_spider();
+global.enemies[EnemyIdx.Earth] = __get_enemy_earth();
+global.enemies[EnemyIdx.Moon] = __get_enemy_moon();
+global.enemies[EnemyIdx.Asteroid] = __get_enemy_asteroid();
 
 function notify_kill(add_reward, xp_reward) {
     if add_reward {

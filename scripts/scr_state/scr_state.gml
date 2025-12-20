@@ -32,7 +32,7 @@ function __State() constructor {
         return xp / __table[0];
     }
 
-    xp = 4880;
+    xp = 4880 + 8000;
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;
@@ -42,11 +42,12 @@ function __State() constructor {
         80,
         800,
 		4000,
-        // 4,
-        4,
+        SKIP_HOUSE ? 0 : 4,
         8000,
     ];
 }
+
+#macro SKIP_HOUSE true
 
 globalvar State;
 State = new __State();

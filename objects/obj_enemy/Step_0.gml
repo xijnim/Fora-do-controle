@@ -15,6 +15,9 @@ with obj_enemy {
         meeting_predator = true;
     }
 }
+if place_meeting(x, y, obj_sun) {
+    meeting_predator = true;
+}
 if meeting_predator {
     is_dead = true;
 }

@@ -6,6 +6,9 @@ function CharacterController(inst) constructor {
 
             if move_x != 0 || move_y != 0 {
                 var spd = 2.2;
+                if room == rm_space {
+                    spd *= 2.25;
+                }
                 var acel = .2;
                 var dir = point_direction(0, 0, move_x, move_y);
 
