@@ -18,9 +18,9 @@ take_damage = function(damage, knockback=0, dir=0) {
     }
     if !State.berserk {
         State.xp -= damage;
+        invincible = true;
     }
     character_controller.add_knockback(knockback, dir);
-    invincible = true;
 }
 
 path_timer = new Timer(.0001, function() {

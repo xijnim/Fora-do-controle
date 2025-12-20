@@ -63,10 +63,10 @@ function notify_kill(add_reward, xp_reward) {
         if !State.berserk {
             State.berserk_progress += 1;
         }
-    }
-    with obj_doritos {
-        vfx_manager.add_angle(40);
-        vfx_manager.add_scale_force(.5, -.5);
+        with obj_doritos {
+            vfx_manager.add_angle(40);
+            vfx_manager.add_scale_force(.5, -.5);
+        }
     }
 	audio_play_sound(sfx_player_eat, 2, 0, .7, 0, random_range(.9, 1.1));
 }
