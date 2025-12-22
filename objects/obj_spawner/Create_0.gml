@@ -26,8 +26,8 @@ timer = new Timer(1, function() {
         spawn_x = room_width/2 + lengthdir_x(room_width/2 + 128, dir);
         spawn_y = room_height/2 + lengthdir_y(room_height/2 + 128, dir);
     }
-
-	audio_play_sound(sfx_micro_enemy_spawn, 3, 0, .5, 0, random_range(.9, 1.1));
+	
+	//sfx_play(sfx_micro_enemy_spawn, {pitch: random_range(.9, 1.1)});
     instance_create_depth(spawn_x, spawn_y, 0, obj_enemy, {type});
 });
 

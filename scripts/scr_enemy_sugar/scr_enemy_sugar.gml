@@ -6,7 +6,6 @@ function __get_enemy_sugar() {
         },
         can_spawn: spawn_cap_cond(EnemyIdx.Sugar, 2, 16),
         xp_reward: 10,
-		repel: false,
     });
 }
 

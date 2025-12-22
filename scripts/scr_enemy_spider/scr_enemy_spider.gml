@@ -6,7 +6,7 @@ function __get_enemy_spider() {
         },
         // can_spawn: spawn_cap_cond(EnemyIdx.Ant, 2, 1),
         can_spawn: spawn_never_cond,
-        xp_reward: 10,
+        xp_reward: 100,
         is_aggressive: true,
 		repel: false,
         victims: [EnemyIdx.Mini_Ant],
