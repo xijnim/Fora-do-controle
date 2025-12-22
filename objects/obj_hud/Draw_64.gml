@@ -1,5 +1,7 @@
-berserk_bar.render();
-level_bar.render();
+if room != rm_ending {
+    berserk_bar.render();
+    level_bar.render();
+}
 
 GET_GUI_SIZE;
 var limit = 20000;

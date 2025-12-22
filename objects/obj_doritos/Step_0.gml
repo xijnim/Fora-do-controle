@@ -51,5 +51,6 @@ var progress = progress_table[State.get_level()-1];
 sprite_index = progress[0];
 if room != progress[1] {
     State.berserk = false;
+    State.berserk_progress = false;
     room_goto(progress[1]);
 }
