@@ -76,7 +76,7 @@ function notify_kill(add_reward, xp_reward) {
             vfx_manager.add_scale_force(.5, -.5);
         }
     }
-	audio_play_sound(sfx_player_eat, 2, 0, .7, 0, random_range(.9, 1.1));
+	sfx_play(sfx_player_eat, {gain: .7, pitch: random_range(.9, 1.1)});
 }
 
 array_foreach(global.enemies, function(enemy) {
