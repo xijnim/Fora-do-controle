@@ -2,9 +2,13 @@ strategy.update();
 vfx_manager.update();
 hitbox.update();
 
-if data.clamp_in_room {
+if clamp_in_room {
     x = clamp(x, 0, room_width);
     y = clamp(y, 0, room_height);
+}
+
+if point_in_rectangle(x, y, 0, 0, room_width, room_height) {
+    clamp_in_room = true;
 }
 
 var is_dead = hitbox.is_dead();

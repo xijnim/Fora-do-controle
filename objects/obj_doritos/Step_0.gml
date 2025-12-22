@@ -49,5 +49,6 @@ if place_meeting(x, y, obj_sun) {
 var progress = progress_table[State.get_level()-1];
 sprite_index = progress[0];
 if room != progress[1] {
+    State.berserk = false;
     room_goto(progress[1]);
 }

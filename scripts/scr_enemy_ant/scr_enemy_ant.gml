@@ -8,7 +8,7 @@ function __get_enemy_ant() {
         xp_reward: 10,
         is_aggressive: true,
 		repel: false,
-        victims: [EnemyIdx.Sugar],
+        victims: [EnemyIdx.Sugar, EnemyIdx.Chocolate, EnemyIdx.Mini_Nut, EnemyIdx.Cheese],
     });
 }
 

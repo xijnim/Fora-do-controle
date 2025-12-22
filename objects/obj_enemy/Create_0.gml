@@ -14,6 +14,8 @@ vfx_manager.add_angle(50);
 hsp = 0;
 vsp = 0;
 
+clamp_in_room = data.clamp_in_room;
+
 if type == EnemyIdx.Mini_Human {
     image_index = irandom(image_number-1);
     image_speed = 0;
