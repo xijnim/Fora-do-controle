@@ -1,7 +1,7 @@
 var xscale = vfx_manager.get_xscale();
 var yscale = vfx_manager.get_yscale();
 var alpha = vfx_manager.get_alpha();
-var angle = vfx_manager.get_angle();
+var angle = vfx_manager.get_angle() + image_angle;
 
 if flash {
     shader_set(shd_color_overlay);
@@ -11,6 +11,6 @@ draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, angle, c_white,
 
 shader_reset();
 
-draw_text(x, y, $"XP: {State.xp}\nLevel: {State.get_level()}");
-draw_shadow(x, bbox_bottom-4, 12, 6);
+/*draw_text(x, y, $"XP: {State.xp}\nLevel: {State.get_level()}");
+draw_shadow(x, bbox_bottom-4, 12, 6);*/
 

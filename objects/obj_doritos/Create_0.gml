@@ -17,6 +17,7 @@ take_damage = function(damage, knockback=0, dir=0) {
         return;
     }
     if !State.berserk {
+		sfx_play(sfx_damage);
         State.xp -= damage;
         invincible = true;
     }
@@ -27,6 +28,7 @@ take_damage = function(damage, knockback=0, dir=0) {
 path_timer = new Timer(.0001, function() {
     var path = instance_create_depth(x, y, depth+1, obj_doritos_path);
     path.sprite_index = sprite_index;
+	path.image_angle = image_angle;
 });
 
 flash = false;

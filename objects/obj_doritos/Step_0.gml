@@ -18,8 +18,11 @@ if State.berserk_progress ==  State.berserk_needed {
 }
 
 if State.berserk {
+	image_angle += 5;
     berserk_timer.tick();
     path_timer.tick();
+} else {
+	image_angle = lerp_angle(image_angle, 0, .2);	
 }
 
 x = clamp(x, 0, room_width);

@@ -123,6 +123,8 @@
     {"id":{"name":"scr_timer","path":"scripts/scr_timer/scr_timer.yy",},},
     {"id":{"name":"scr_vfx_manager","path":"scripts/scr_vfx_manager/scr_vfx_manager.yy",},},
     {"id":{"name":"shd_color_overlay","path":"shaders/shd_color_overlay/shd_color_overlay.yy",},},
+    {"id":{"name":"sfx_berseker","path":"sounds/sfx_berseker/sfx_berseker.yy",},},
+    {"id":{"name":"sfx_damage","path":"sounds/sfx_damage/sfx_damage.yy",},},
     {"id":{"name":"sfx_micro_enemy_spawn","path":"sounds/sfx_micro_enemy_spawn/sfx_micro_enemy_spawn.yy",},},
     {"id":{"name":"sfx_music","path":"sounds/sfx_music/sfx_music.yy",},},
     {"id":{"name":"sfx_player_eat","path":"sounds/sfx_player_eat/sfx_player_eat.yy",},},

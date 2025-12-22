@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfx_berseker",
+  "%Name":"sfx_damage",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.44836736,
+  "duration":0.10292517,
   "exportDir":"",
-  "name":"sfx_berseker",
+  "name":"sfx_damage",
   "parent":{
     "name":"Doritos",
     "path":"folders/Doritos.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_berseker.wav",
-  "volume":1.0,
+  "soundFile":"sfx_damage.wav",
+  "volume":0.77,
 }
