@@ -55,6 +55,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_doritos_path","path":"objects/obj_doritos_path/obj_doritos_path.yy",},},
     {"id":{"name":"obj_doritos","path":"objects/obj_doritos/obj_doritos.yy",},},
+    {"id":{"name":"obj_end","path":"objects/obj_end/obj_end.yy",},},
     {"id":{"name":"obj_enemy_dead","path":"objects/obj_enemy_dead/obj_enemy_dead.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_game_setup","path":"objects/obj_game_setup/obj_game_setup.yy",},},

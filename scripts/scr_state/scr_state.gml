@@ -32,19 +32,31 @@
         return xp / __table[0];
     }
 
+    reset = function() {
+        xp = 0;
+        berserk = false;
+        berserk_progress = 0;
+        __level = 1;
+        __table = __get_table();
+    }
+
     xp = 8000 //+ 4884;
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;
+
+    __get_table = function() {
+        return [
+            80,
+            800,
+            4000,
+            SKIP_HOUSE ? 0 : 4,
+            8000,
+        ];
+    }
     
     __level = 1;
-    __table = [
-        80,
-        800,
-		4000,
-        SKIP_HOUSE ? 0 : 4,
-        8000,
-    ];
+    __table = __get_table();
 }
 
 #macro SKIP_HOUSE true
