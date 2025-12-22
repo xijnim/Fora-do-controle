@@ -1,4 +1,7 @@
-timer = new Timer(1, function() {
+var time = 1;
+if room == rm_gamepad { time = .1 };
+
+timer = new Timer(time, function() {
 	if instance_number(obj_enemy) >= 64 {
 		return;
 	}

@@ -4,8 +4,8 @@ function __get_enemy_mini_ant() {
         make_strategy: function(inst) {
             return new EnemyMiniAntStrategy(inst);
         },
-        can_spawn: spawn_cap_cond(EnemyIdx.Ant, 3, 12),
-        xp_reward: 50,
+        can_spawn: spawn_cap_cond(EnemyIdx.Ant, 3, 24),
+        xp_reward: 100,
         is_aggressive: false,
 		repel: true,
         clamp_in_room: false,
