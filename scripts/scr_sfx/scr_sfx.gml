@@ -16,6 +16,14 @@ call_later(
     function() {
         if keyboard_check_pressed(ord("M")) {
             global.muted = !global.muted;
+
+            if global.muted {
+                audio_pause_sound(global.music);
+            } else {
+                audio_resume_sound(global.music);
+            }
         }
     }, true
 );
+global.music = audio_play_sound(sfx_music, 0, 1);
+
