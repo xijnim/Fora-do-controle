@@ -19,25 +19,29 @@ function EnemyTankStrategy(inst) constructor {
         var dir = point_direction(__inst.x, __inst.y, doritos.x, doritos.y);
 
         __dir = lerp_angle(__dir, dir, .2);
-        __yscale = lerp(__yscale, 1, 0.1);
-        __xscale = lerp(__xscale, 1, 0.1);
+        __vfx_manager.update();
 		__inst.image_angle = lerp_angle(__inst.image_angle, __dir, .025);
     }
 
     render = function() {
+        var xscale = __vfx_manager.get_xscale();
+        var yscale = __vfx_manager.get_yscale();
+
         draw_sprite_ext(
             spr_enemy_tank_gun, 0,
             __inst.x, __inst.y,
-            1, 1,
+            xscale, yscale,
             __dir, c_white, 1
         );
     }
 
     __inst = inst;
     __dir = 0;
-    __xscale = 0;
-    __yscale = 0;
+    __vfx_manager = new VfxManager();
+    __vfx_manager.set_scale_add(-1, -1);
     __shoot_timer = new Timer(1.5, function() {
+        __vfx_manager.add_scale_force(.3, -.3);
+        __inst.vfx_manager.add_scale_force(.3, -.3);
         var gun_w = sprite_get_width(spr_enemy_tank_gun);
         var bullet_x = __inst.x + lengthdir_x(gun_w/2, __dir);
         var bullet_y = __inst.y + lengthdir_y(gun_w/2, __dir);
