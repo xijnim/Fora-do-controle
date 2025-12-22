@@ -1,5 +1,6 @@
  function __State() constructor {
     update = function() {
+		xp = max(xp, 0);
         if array_length(__table) == 0 {
             return;
         }
@@ -40,7 +41,7 @@
         __table = __get_table();
     }
 
-    xp = 8000 //+ 4884;
+    xp = 0 //+ 4884;
     berserk = false;
 	berserk_needed = 8;
     berserk_progress = 0;
@@ -59,7 +60,7 @@
     __table = __get_table();
 }
 
-#macro SKIP_HOUSE true
+#macro SKIP_HOUSE false
 
 globalvar State;
 State = new __State();
