@@ -8,6 +8,7 @@ vfx_manager.update();
 
 if State.berserk_progress ==  State.berserk_needed {
     if !had_berserk {
+		sfx_play(sfx_berseker);
         State.berserk = true;
         had_berserk = true;
         character_controller.reset_berserk();
