@@ -46,6 +46,7 @@ function EnemyTankStrategy(inst) constructor {
         var bullet_x = __inst.x + lengthdir_x(gun_w/2, __dir);
         var bullet_y = __inst.y + lengthdir_y(gun_w/2, __dir);
         
+		sfx_play(sfx_wpn_tank);
         var bullet = instance_create_depth(bullet_x, bullet_y, 0, obj_tank_bullet, {dir: __dir});
 		bullet.image_angle = point_direction(__inst.x, __inst.y, obj_doritos.x, obj_doritos.y);
     });

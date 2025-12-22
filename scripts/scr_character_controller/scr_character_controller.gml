@@ -1,3 +1,5 @@
+audio_play_sound(sfx_music, 0, 1);
+
 function CharacterController(inst) constructor {
     update = function() {
         if !State.berserk {

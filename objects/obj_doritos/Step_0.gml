@@ -31,7 +31,7 @@ var progress_table = [
     [spr_doritos_3, rm_table],
     [spr_doritos_4, rm_house],
     [spr_doritos_5, rm_city],
-    [spr_doritos_6, rm_space],
+    [spr_doritos_6, rm_ending],
 ];
 
 if room == rm_house {
